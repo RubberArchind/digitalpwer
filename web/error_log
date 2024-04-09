@@ -1,0 +1,426 @@
+[06-Apr-2024 09:11:33 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'qQkx^1^[x8;w', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/layouts/main.php(27): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/layouts/main.php(27): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1044
+    [2] => Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer'
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'qQkx^1^[x8;w', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#20 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#21 [internal function]: app\controllers\SiteController->actionIndex()
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#18 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#19 [internal function]: app\controllers\SiteController->actionIndex()
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#26 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1044
+    [2] => Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer'
+)
+
+[06-Apr-2024 09:11:35 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'qQkx^1^[x8;w', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/layouts/main.php(27): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/layouts/main.php(27): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1044
+    [2] => Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer'
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'qQkx^1^[x8;w', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#20 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#21 [internal function]: app\controllers\SiteController->actionIndex()
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#18 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#19 [internal function]: app\controllers\SiteController->actionIndex()
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#26 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1044
+    [2] => Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer'
+)
+
+[06-Apr-2024 09:11:36 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'qQkx^1^[x8;w', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/layouts/main.php(27): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/layouts/main.php(27): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1044
+    [2] => Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer'
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'qQkx^1^[x8;w', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#20 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#21 [internal function]: app\controllers\SiteController->actionIndex()
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1044] Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer' in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#18 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#19 [internal function]: app\controllers\SiteController->actionIndex()
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#26 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1044
+    [2] => Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer'
+)
+

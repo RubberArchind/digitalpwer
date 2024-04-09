@@ -1,0 +1,14 @@
+#trx-table_wrapper input {
+	height: 50px;
+	line-height: 50px;
+	background: #F8F7F7;
+	border: 1px solid #E0E2DB;
+	font-size: 14px;
+	color: #605C8D;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-ms-border-radius: 16px;
+	-o-border-radius: 16px;
+	border-radius: 16px;
+	box-shadow: none;
+}
