@@ -41,6 +41,11 @@ $config = [
                 ],
             ],
         ],
+        'assetManager' => [
+            'class' => 'yii\web\AssetManager',
+            'forceCopy' => true,
+            'appendTimestamp' => true,
+        ],
         'db' => $db,
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -71,7 +76,7 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['127.0.0.1', '::1', '192.168.0.*', '103.194.174.130'],
     ];
 }
 

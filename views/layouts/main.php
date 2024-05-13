@@ -11,6 +11,7 @@ use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 use app\models\User;
 use yii\helpers\Url;
+use app\models\Transaction;
 
 AppAsset::register($this);
 
@@ -25,6 +26,14 @@ $state = $this->params['state'];
 global $user;
 
 $user = User::findOne(Yii::$app->user->id);
+$trxs = Transaction::findAll(['target_id' => $user->user_id]);
+$totaldeposit = 0;
+foreach ($trxs as $trx) {
+    if($trx->type=="DEPOSIT"){
+        $totaldeposit += $trx->amount;
+    }
+}
+
 if ($state == "dashboard") {
     $this->registerLinkTag(['rel' => 'stylesheet', 'href' => Yii::getAlias('@web/css/backend-plugin.min.css')]);
     $this->registerLinkTag(['rel' => 'stylesheet', 'href' => Yii::getAlias('@web/css/backend.css?v=1.0.0')]);
@@ -117,7 +126,7 @@ if ($state == "dashboard") {
 <html lang="<?= Yii::$app->language ?>">
 
 <head>
-    <title><?= Html::encode($this->title) ?></title>
+    <title style="color: #117060 !important;"><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
 
@@ -154,9 +163,9 @@ if ($state == "dashboard") {
             </div>
             <div class="iq-sidebar  sidebar-default ">
                 <div class="iq-sidebar-logo d-flex align-items-center">
-                    <a href="../backend/index.html" class="header-logo">
+                    <a href="dashboard" class="header-logo">
                         <img src="/images/logo.png" alt="logo">
-                        <h3 class="logo-title light-logo"><?= Html::encode($this->title) ?></h3>
+                        <h3 class="light-logo" style="color: #117060 !important;"><?= Html::encode($this->title) ?></h3>
                     </a>
                     <div class="iq-menu-bt-sidebar ml-0">
                         <i class="las la-bars wrapper-menu"></i>
@@ -174,8 +183,11 @@ if ($state == "dashboard") {
                                     <span class="ml-4">Home</span>
                                 </a>
                             </li>
+
+                            <?php if($totaldeposit>=100000){ ?>
                             <li class="<?php echo Yii::$app->requestedRoute == "dashboard/topup" ? "active" : "" ?>">
-                                <a href="/dashboard/topup" class="svg-icon">
+                                <!-- <a href="/dashboard/topup" class="svg-icon"> -->
+                                <a class="svg-icon" onClick="onWorking()">
                                     <svg class="svg-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.87617 3.75H19.1238L21 8.86683V10.5C21 11.2516 20.7177 11.9465 20.25 12.4667V21H3.75V12.4667C3.28234 11.9465 3 11.2516 3 10.5V8.86683L4.87617 3.75ZM18.1875 13.3929C18.3807 13.3929 18.5688 13.3731 18.75 13.3355V19.5H15V15H9L9 19.5H5.25V13.3355C5.43122 13.3731 5.61926 13.3929 5.8125 13.3929C6.63629 13.3929 7.36559 13.0334 7.875 12.4667C8.38441 13.0334 9.11371 13.3929 9.9375 13.3929C10.7613 13.3929 11.4906 13.0334 12 12.4667C12.5094 13.0334 13.2387 13.3929 14.0625 13.3929C14.8863 13.3929 15.6156 13.0334 16.125 12.4667C16.6344 13.0334 17.3637 13.3929 18.1875 13.3929ZM10.5 19.5H13.5V16.5H10.5L10.5 19.5ZM19.5 9.75V10.5C19.5 11.2965 18.8856 11.8929 18.1875 11.8929C17.4894 11.8929 16.875 11.2965 16.875 10.5V9.75H19.5ZM19.1762 8.25L18.0762 5.25H5.92383L4.82383 8.25H19.1762ZM4.5 9.75V10.5C4.5 11.2965 5.11439 11.8929 5.8125 11.8929C6.51061 11.8929 7.125 11.2965 7.125 10.5V9.75H4.5ZM8.625 9.75V10.5C8.625 11.2965 9.23939 11.8929 9.9375 11.8929C10.6356 11.8929 11.25 11.2965 11.25 10.5V9.75H8.625ZM12.75 9.75V10.5C12.75 11.2965 13.3644 11.8929 14.0625 11.8929C14.7606 11.8929 15.375 11.2965 15.375 10.5V9.75H12.75Z" fill="#080341" />
                                     </svg>
@@ -198,6 +210,7 @@ if ($state == "dashboard") {
                                     <span class="ml-4">Transactions</span>
                                 </a>
                             </li>
+                            <?php } ?>
                         </ul>
                     </nav>
 
@@ -208,9 +221,9 @@ if ($state == "dashboard") {
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
                         <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
                             <i class="ri-menu-line wrapper-menu"></i>
-                            <a href="../backend/index.html" class="header-logo">
-                                <h4 class="logo-title text-uppercase">Webkit</h4>
-
+                            <a href="#" class="header-logo">
+                                <img src="/images/logo.png" alt="logo">
+                                <h3 class="logo-title light-logo" style="color: #117060 !important;"><?= Html::encode(" ".$this->title) ?></h3>
                             </a>
                         </div>
                         <div class="navbar-breadcrumb">
@@ -230,7 +243,7 @@ if ($state == "dashboard") {
                                     </form>
                                 </div>
                             </li> -->
-                                    <li class="nav-item nav-icon search-content">
+                                    <!-- <li class="nav-item nav-icon search-content">
                                         <a href="#" class="search-toggle rounded" id="dropdownSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="ri-search-line"></i>
                                         </a>
@@ -242,7 +255,7 @@ if ($state == "dashboard") {
                                                 </div>
                                             </form>
                                         </div>
-                                    </li>
+                                    </li> -->
                                     <li class="nav-item nav-icon nav-item-icon dropdown">
                                         <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
@@ -258,52 +271,24 @@ if ($state == "dashboard") {
                                                     <div class="cust-title p-3">
                                                         <div class="d-flex align-items-center justify-content-between">
                                                             <h5 class="mb-0">All Messages</h5>
-                                                            <a class="badge badge-primary badge-card" href="#">3</a>
+                                                            <a class="badge badge-primary badge-card" href="#">0</a>
                                                         </div>
                                                     </div>
                                                     <div class="px-3 pt-0 pb-0 sub-card">
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center cust-card py-3 border-bottom">
-                                                                <div class="">
-                                                                    <img class="avatar-50 rounded-small" src="/images/user/01.jpg" alt="01">
-                                                                </div>
-                                                                <div class="media-body ml-3">
-                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                        <h6 class="mb-0">Emma Watson</h6>
-                                                                        <small class="text-dark"><b>12 : 47 pm</b></small>
-                                                                    </div>
-                                                                    <small class="mb-0">Lorem ipsum dolor sit amet</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center cust-card py-3 border-bottom">
-                                                                <div class="">
-                                                                    <img class="avatar-50 rounded-small" src="/images/user/02.jpg" alt="02">
-                                                                </div>
-                                                                <div class="media-body ml-3">
-                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                        <h6 class="mb-0">Ashlynn Franci</h6>
-                                                                        <small class="text-dark"><b>11 : 30 pm</b></small>
-                                                                    </div>
-                                                                    <small class="mb-0">Lorem ipsum dolor sit amet</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center cust-card py-3">
-                                                                <div class="">
-                                                                    <img class="avatar-50 rounded-small" src="/images/user/03.jpg" alt="03">
-                                                                </div>
-                                                                <div class="media-body ml-3">
-                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                        <h6 class="mb-0">Kianna Carder</h6>
-                                                                        <small class="text-dark"><b>11 : 21 pm</b></small>
-                                                                    </div>
-                                                                    <small class="mb-0">Lorem ipsum dolor sit amet</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
+                                                        <!--<a href="#" class="iq-sub-card">-->
+                                                        <!--    <div class="media align-items-center cust-card py-3">-->
+                                                        <!--        <div class="">-->
+                                                        <!--            <img class="avatar-50 rounded-small" src="/images/user/03.jpg" alt="03">-->
+                                                        <!--        </div>-->
+                                                        <!--        <div class="media-body ml-3">-->
+                                                        <!--            <div class="d-flex align-items-center justify-content-between">-->
+                                                        <!--                <h6 class="mb-0">Kianna Carder</h6>-->
+                                                        <!--                <small class="text-dark"><b>11 : 21 pm</b></small>-->
+                                                        <!--            </div>-->
+                                                        <!--            <small class="mb-0">Lorem ipsum dolor sit amet</small>-->
+                                                        <!--        </div>-->
+                                                        <!--    </div>-->
+                                                        <!--</a>-->
                                                     </div>
                                                     <a class="right-ic btn btn-primary btn-block position-relative p-2" href="#" role="button">
                                                         View All
@@ -326,52 +311,24 @@ if ($state == "dashboard") {
                                                     <div class="cust-title p-3">
                                                         <div class="d-flex align-items-center justify-content-between">
                                                             <h5 class="mb-0">Notifications</h5>
-                                                            <a class="badge badge-primary badge-card" href="#">3</a>
+                                                            <a class="badge badge-primary badge-card" href="#">0</a>
                                                         </div>
                                                     </div>
                                                     <div class="px-3 pt-0 pb-0 sub-card">
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center cust-card py-3 border-bottom">
-                                                                <div class="">
-                                                                    <img class="avatar-50 rounded-small" src="/images/user/01.jpg" alt="01">
-                                                                </div>
-                                                                <div class="media-body ml-3">
-                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                        <h6 class="mb-0">Emma Watson</h6>
-                                                                        <small class="text-dark"><b>12 : 47 pm</b></small>
-                                                                    </div>
-                                                                    <small class="mb-0">Lorem ipsum dolor sit amet</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center cust-card py-3 border-bottom">
-                                                                <div class="">
-                                                                    <img class="avatar-50 rounded-small" src="/images/user/02.jpg" alt="02">
-                                                                </div>
-                                                                <div class="media-body ml-3">
-                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                        <h6 class="mb-0">Ashlynn Franci</h6>
-                                                                        <small class="text-dark"><b>11 : 30 pm</b></small>
-                                                                    </div>
-                                                                    <small class="mb-0">Lorem ipsum dolor sit amet</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center cust-card py-3">
-                                                                <div class="">
-                                                                    <img class="avatar-50 rounded-small" src="/images/user/03.jpg" alt="03">
-                                                                </div>
-                                                                <div class="media-body ml-3">
-                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                        <h6 class="mb-0">Kianna Carder</h6>
-                                                                        <small class="text-dark"><b>11 : 21 pm</b></small>
-                                                                    </div>
-                                                                    <small class="mb-0">Lorem ipsum dolor sit amet</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
+                                                        <!--<a href="#" class="iq-sub-card">-->
+                                                        <!--    <div class="media align-items-center cust-card py-3">-->
+                                                        <!--        <div class="">-->
+                                                        <!--            <img class="avatar-50 rounded-small" src="/images/user/03.jpg" alt="03">-->
+                                                        <!--        </div>-->
+                                                        <!--        <div class="media-body ml-3">-->
+                                                        <!--            <div class="d-flex align-items-center justify-content-between">-->
+                                                        <!--                <h6 class="mb-0">Kianna Carder</h6>-->
+                                                        <!--                <small class="text-dark"><b>11 : 21 pm</b></small>-->
+                                                        <!--            </div>-->
+                                                        <!--            <small class="mb-0">Lorem ipsum dolor sit amet</small>-->
+                                                        <!--        </div>-->
+                                                        <!--    </div>-->
+                                                        <!--</a>-->
                                                     </div>
                                                     <a class="right-ic btn btn-primary btn-block position-relative p-2" href="#" role="button">
                                                         View All
@@ -388,7 +345,7 @@ if ($state == "dashboard") {
                                             </div>
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-right border-none" aria-labelledby="dropdownMenuButton">
-                                            <li class="dropdown-item d-flex svg-icon">
+                                            <!-- <li class="dropdown-item d-flex svg-icon">
                                                 <svg class="svg-icon mr-0 text-primary" id="h-01-p" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                                 </svg>
@@ -412,7 +369,7 @@ if ($state == "dashboard") {
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                                 </svg>
                                                 <a href="../app/user-privacy-setting.html">Privacy Settings</a>
-                                            </li>
+                                            </li> -->
                                             <li class="dropdown-item  d-flex svg-icon border-top" id="btnLogout" style="cursor: pointer;">
                                                 <svg class="svg-icon mr-0 text-primary" id="h-05-p" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />

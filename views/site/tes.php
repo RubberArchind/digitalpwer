@@ -5,7 +5,7 @@ use app\models\User;
 
 /** @var yii\web\View $this */
 
-$this->title = 'Digitalpwer';
+$this->title = 'digitalpwer';
 $user = User::findOne(Yii::$app->user->id);
 ?>
 
@@ -44,12 +44,12 @@ $user = User::findOne(Yii::$app->user->id);
                     <div class="content pt-4 pt-lg-0">
                         <h3>Learn more about us</h3>
                         <p class="text-muted" style="text-align: justify; text-justify:inter-word;">
-                            Digitalpwer telah berhasil menciptakan lingkungan yang terintegrasi dengan berbagai layanan pembayaran untuk Anda. Berbagai kemudahan bisa Anda nikmati untuk memenuhi segala kebutuhan pembayaran secara digital dengan mudah, aman. Dan dengan menjadi member digitalpwer berbagai keuntungan bisa Anda peroleh.
+                            Digitalpwer telah berhasil menciptakan lingkungan yang terintegrasi dengan berbagai layanan pembayaran untuk Anda. Berbagai kemudahan bisa Anda nikmati untuk memenuhi segala kebutuhan pembayaran secara digital dengan sangat mudah, aman lancar dan terjamin. Dengan menjadi member bersama digitalpwer pasti keuntungan Anda Terima.
                         </p>
                         <ul>
                             <li><i class="icofont-check-circled"></i> Cukup melakukan deposit berapapun Anda akan mendapatkan Cashback 100% dari nilai deposit Anda </li>
                             <li><i class="icofont-check-circled"></i> Apabila Anda menginfokan digitalpwer kepada siapapun Anda berhak memperoleh bonus referral sebesar 20% </li>
-                            <li><i class="icofont-check-circled"></i> Makin banyak omzet akumulasi Anda makin banyak hadiah yang bisa anda dapatkan  </li>
+                            <li><i class="icofont-check-circled"></i> Makin banyak omzet akumulasi Anda makin banyak bonus hadiah yang Anda dapatkan  </li>
                         </ul>
                         <p class="text-black-50" style="text-align: justify; text-justify:inter-word;">
                             Digitalpwer sungguh memahami betul akan segala aspek pembayaran secara digital yang mudah, aman dan nyaman dan bisa Anda nikmati dan dikendalikan sendiri. Digitalpwer akan membantu untuk mewujudkan kebebasan finansial Anda dengan cara yang cukup sederhana.
@@ -138,7 +138,7 @@ $user = User::findOne(Yii::$app->user->id);
                 <div class="col-lg-4 col-md-6">
                     <div class="box featured" data-aos="zoom-in">
                         <h3>Paket 1</h3>
-                        <h4><sup>Rp</sup>1000.000 - 1.000.000<span> / akun</span></h4>
+                        <h4><sup>Rp</sup>100.000 - 1.000.000<span> / akun</span></h4>
                         <ul>
                             <li>+ Pin aktifasi Rp 100.000,-</li>
                             <!-- <li>Nec feugiat nisl</li>
@@ -232,8 +232,8 @@ $user = User::findOne(Yii::$app->user->id);
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box icon-box-cyan">
                         <div class="icon"><i class="bx bx-chevrons-down"></i></div>
-                        <h4 class="title"><a href="">Bonus Referral hingga 2.5%</a></h4>
-                        <p class="description text-muted">Dapatkan bonus tambahan untuk tiap transaksi yang dihasilkan referral kamu</p>
+                        <h4 class="title"><a href="">Bonus Referral hingga 20%</a></h4>
+                        <p class="description text-muted">Dapatkan bonus tambahan untuk tiap transaksi yang dihasilkan referral Anda</p>
                     </div>
                 </div>
 

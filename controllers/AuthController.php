@@ -87,7 +87,7 @@ class AuthController extends Controller
                     'bank_code' => $model->bank_code,
                     'bank_number' => $model->bank_number,
                     'password' => password_hash($model->password, PASSWORD_DEFAULT),
-                    'referral' => (isset($model->referral)) ? $model->referral : '',
+                    'referral' => (isset($model->referral)) ? $model->referral : '3ONQDK',
                     'user_referral' => strtoupper($this->generate_referral())
                 );
 
@@ -148,12 +148,17 @@ class AuthController extends Controller
         $postData = Yii::$app->request->post();
 
         if ($postData) {
-            $model->load($postData);
-            $model->email = $model->username;
-            if ($model->validate()) {
-                return json_encode(array("data" => $model, "error" => $model->getErrors(), "login" => $model->login()));
-            } else {
-                return json_encode(array("errors" => $model->getErrors()));
+            try{
+                $model->load($postData);
+                $model->email = $model->username;
+                if ($model->validate()) {
+                    
+                        return json_encode(array("data" => $model, "error" => $model->getErrors(), "login" => $model->login()));
+                } else {
+                    return json_encode(array("errors" => $model->getErrors()));
+                }
+            } catch (\Exception $e) {
+                    return json_encode(array('login'=>false, 'errors' => array('password'=>$e->getMessage())));
             }
         }
 

@@ -10,6 +10,7 @@ use Yii;
  * @property string $id
  * @property string $user_id
  * @property string $target_id
+ * @property string $method 
  * @property string $type
  * @property float $amount
  * @property string $time
@@ -18,6 +19,9 @@ use Yii;
  */
 class Transaction extends \yii\db\ActiveRecord
 {
+    const SCENARIO_CREATE = 'create';
+
+
     /**
      * {@inheritdoc}
      */
@@ -32,7 +36,7 @@ class Transaction extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'user_id', 'target_id', 'type', 'amount'], 'required'],
+            [['id', 'user_id', 'target_id', 'method', 'type', 'amount'], 'required'],
             [['type'], 'string'],
             [['amount'], 'number'],
             [['time'], 'safe'],
@@ -40,6 +44,13 @@ class Transaction extends \yii\db\ActiveRecord
             [['id'], 'unique'],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'user_id']],
         ];
+    }
+
+    public function scenarios()
+    {
+        $scenarios = parent::scenarios();
+        $scenarios['create'] = ['id', 'user_id', 'target_id', 'method', 'type', 'amount'];
+        return $scenarios;
     }
 
     /**
@@ -51,6 +62,7 @@ class Transaction extends \yii\db\ActiveRecord
             'id' => Yii::t('app', 'ID'),
             'user_id' => Yii::t('app', 'User ID'),
             'target_id' => Yii::t('app', 'Target ID'),
+            'method' => Yii::t('app', 'Method'),
             'type' => Yii::t('app', 'Type'),
             'amount' => Yii::t('app', 'Amount'),
             'time' => Yii::t('app', 'Time'),

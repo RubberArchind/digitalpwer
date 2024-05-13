@@ -3,6 +3,7 @@
 use app\models\User;
 use miloschuman\highcharts\Highcharts;
 use yii\web\JsExpression;
+use yii\widgets\Pjax;
 
 /** @var yii\web\View $this */
 
@@ -60,29 +61,22 @@ sort($dates);
                 <div class="card">
                     <div class="card-body">
                         <h5 class="mb-3">Level 1</h5>
+                        <?php Pjax::begin(['id' => 'level1']) ?>
                         <p class="mb-3"><i class="las la-user mr-2"></i><?= count($level1); ?> Orang</p>
                         <div class="iq-progress-bar bg-success-light mb-4">
                             <span class="bg-success iq-progress progress-1" data-percent="100" style="transition: width 2s ease 0s; width: 65%;"></span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
-                            <div class="iq-media-group">
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/01.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/02.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/03.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/04.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="btn bg-success-light">Detail</a>
-                            </div>
+                            <ul class="list-group">
+                                <?php
+                                $no = 1;
+                                foreach ($level1 as $user1) {
+                                    echo sprintf('<li class="list-group-item">%s. %s</li>', $no++, $user1->full_name);
+                                }
+                                ?>
+                            </ul>
                         </div>
+                        <?php Pjax::end() ?>
                     </div>
                 </div>
             </div>
@@ -91,29 +85,22 @@ sort($dates);
                 <div class="card">
                     <div class="card-body">
                         <h5 class="mb-3">Level 2</h5>
+                        <?php Pjax::begin(['id' => 'level2']) ?>
                         <p class="mb-3"><i class="las la-user mr-2"></i><?= count($level2); ?> Orang</p>
                         <div class="iq-progress-bar bg-primary-light mb-4">
                             <span class="bg-primary-light iq-progress progress-1" data-percent="100" style="transition: width 2s ease 0s; width: 65%;"></span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
-                            <div class="iq-media-group">
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/01.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/02.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/03.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/04.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="btn bg-primary-light">Detail</a>
-                            </div>
+                            <ul class="list-group">
+                                <?php
+                                $no = 1;
+                                foreach ($level2 as $user2) {
+                                    echo sprintf('<li class="list-group-item">%s. %s</li>', $no++, $user2->full_name);
+                                }
+                                ?>
+                            </ul>
                         </div>
+                        <?php Pjax::end() ?>
                     </div>
                 </div>
             </div>
@@ -122,29 +109,22 @@ sort($dates);
                 <div class="card">
                     <div class="card-body">
                         <h5 class="mb-3">Level 3</h5>
+                        <?php Pjax::begin(['id' => 'level3']) ?>
                         <p class="mb-3"><i class="las la-user mr-2"></i><?= count($level3); ?> Orang</p>
                         <div class="iq-progress-bar bg-warning-light mb-4">
                             <span class="bg-warning-light iq-progress progress-1" data-percent="100" style="transition: width 2s ease 0s; width: 65%;"></span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
-                            <div class="iq-media-group">
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/01.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/02.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/03.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/04.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="btn bg-warning-light">Detail</a>
-                            </div>
+                            <ul class="list-group">
+                                <?php
+                                $no = 1;
+                                foreach ($level3 as $user3) {
+                                    echo sprintf('<li class="list-group-item">%s. %s</li>', $no++, $user3->full_name);
+                                }
+                                ?>
+                            </ul>
                         </div>
+                        <?php Pjax::end() ?>
                     </div>
                 </div>
             </div>
@@ -153,35 +133,28 @@ sort($dates);
                 <div class="card">
                     <div class="card-body">
                         <h5 class="mb-3">Level 4</h5>
+                        <?php Pjax::begin(['id' => 'level4']) ?>
                         <p class="mb-3"><i class="las la-user mr-2"></i><?= count($level4); ?> Orang</p>
                         <div class="iq-progress-bar bg-secondary-light mb-4">
                             <span class="bg-secondary iq-progress progress-1" data-percent="100" style="transition: width 2s ease 0s; width: 65%;"></span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
-                            <div class="iq-media-group">
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/01.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/02.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/03.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                                <a href="#" class="iq-media">
-                                    <img src="/images/user/04.jpg" class="img-fluid avatar-40 rounded-circle" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="btn bg-secondary-light">Detail</a>
-                            </div>
+                            <ul class="list-group">
+                                <?php
+                                $no = 1;
+                                foreach ($level4 as $user4) {
+                                    echo sprintf('<li class="list-group-item">%s. %s</li>', $no++, $user4->full_name);
+                                }
+                                ?>
+                            </ul>
                         </div>
+                        <?php Pjax::end() ?>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
@@ -231,6 +204,28 @@ sort($dates);
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
+
+
+<script>
+    window.setInterval(function() {
+        $.pjax.reload({
+            container: "#level1",
+            async: false
+        });
+        $.pjax.reload({
+            container: "#level2",
+            async: false
+        });
+        $.pjax.reload({
+            container: "#level3",
+            async: false
+        });
+        $.pjax.reload({
+            container: "#level4",
+            async: false
+        });
+    }, 5000);
+</script>

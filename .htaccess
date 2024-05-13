@@ -1,4 +1,23 @@
-RewriteEngine On
+# RewriteEngine On
 
-RewriteCond %{REQUEST_URI} !^/web/
-RewriteRule ^(.*)$ /web/$1 [L,R=301]
+# RewriteCond %{REQUEST_METHOD}  !=POST
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_URI} !^/web/
+# RewriteRule ^(.*)$ /web/$1 [L,R=301]
+
+Options +FollowSymlinks
+IndexIgnore */*
+
+RewriteEngine on
+
+# If a directory or a file exists, use it directly
+
+# Otherwise, redirect everything to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php
+RewriteCond %{HTTP_HOST} ^digitalpwer\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.digitalpwer\.com$
+RewriteRule ^(.*)$ "https\:\/\/app\.digitalpwer\.com\/$1" [R=301,L]
+

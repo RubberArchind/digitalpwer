@@ -1,0 +1,7 @@
+composer.lock
+cgi-bin
+vendor
+runtime/*
+web/cgi-bin
+web/assets/*
+control.digitalpwer.com

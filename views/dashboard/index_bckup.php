@@ -7,11 +7,10 @@ use app\models\Logs;
 use kartik\money\MaskMoney;
 use miloschuman\highcharts\Highcharts;
 use yii\widgets\ActiveForm;
-use yii\widgets\Pjax;
 
 /** @var yii\web\View $this */
 
-$this->title = 'digitalpwer';
+$this->title = 'Digitalpwer';
 $this->params['state'] = 'dashboard';
 $user = User::findOne(Yii::$app->user->id);
 
@@ -31,7 +30,6 @@ foreach ($bonuses as $data) {
 }
 // Yii::$app->formatter->locale = 'id-ID';     
 ?>
-<script src="https://app.midtrans.com/snap/snap.js" data-client-key="Mid-client-ykXjhv_g8Ja88RAK"></script>
 
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
     <div id="copyToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true">
@@ -50,7 +48,6 @@ foreach ($bonuses as $data) {
         </div>
     </div>
 </div>
-
 <div id="depositModal" class="modal fade bd-example-modal-lg" tabindex="-1" style="display: none;" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -91,8 +88,7 @@ foreach ($bonuses as $data) {
                 </div>
 
                 <p>* Proses deposit akan otomatis masuk dalam 1-5 menit</p>
-                <p>** Fee admin akan otomatis terpotong dari nilai deposit Anda</p>
-                <p>*** Jika dalam waktu 5 menit deposit belum masuk hubungi CS</p>
+                <p>** Jika dalam waktu 5 menit deposit belum masuk hubungi CS</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -164,9 +160,8 @@ foreach ($bonuses as $data) {
                         <div class="top-block d-flex align-items-center justify-content-between">
                             <h5>Deposit</h5>
                         </div>
-                        <?php Pjax::begin(['id' => 'deposit']) ?>
                         <h3><span class=""><?php echo Yii::$app->formatter->asCurrency($user->balance_deposit, 'IDR'); ?></span></h3>
-                        <?php Pjax::end() ?>
+
                     </div>
                 </div>
             </div>
@@ -194,12 +189,10 @@ foreach ($bonuses as $data) {
                 <div class="card card-block card-stretch card-height">
                     <div class="card-body">
                         <div class="top-block d-flex align-items-center justify-content-between">
-                            <h5>Bonus & Cashback</h5>
+                            <h5>Bonus</h5>
                             <!-- <span class="badge badge-success">Today</span> -->
                         </div>
-                        <?php Pjax::begin(['id' => 'bonus']) ?>
-                        <h3><span><?php echo Yii::$app->formatter->asCurrency($user->balance_bonus, 'IDR'); ?></span></h3>
-                        <?php Pjax::end() ?>
+                        <h3><span class="counter"><?php echo Yii::$app->formatter->asCurrency($user->balance_bonus, 'IDR'); ?></span></h3>
                         <!-- <div class="d-flex align-items-center justify-content-between mt-1">
                             <p class="mb-0">Total Revenue</p>
                             <span class="text-success">85%</span>
@@ -233,7 +226,7 @@ foreach ($bonuses as $data) {
                         </div>
                         <div class="btn-group btn-group-toggle btn-group-edges">
                             <!-- <div class="row gx-1"> -->
-                            <button id="btnDeposit" type="button" class="mt-2 btn btn-success"><i class="ri-upload-2-line"></i>Deposit</button>
+                            <button type="button" class="mt-2 btn btn-success" data-toggle="modal" data-target="#depositModal"><i class="ri-upload-2-line"></i>Deposit</button>
                             <button type="button" class="mt-2 btn btn-danger " data-toggle="modal" data-target="#withdrawModal"><i class="ri-download-2-line"></i>Withdraw</button>
                             <!-- </div>                             -->
                         </div>
@@ -392,13 +385,13 @@ foreach ($bonuses as $data) {
                                                             <li class="list-inline-item items-list">
                                                                 <div class="px-4">
                                                                     <div class="event-date badge bg-info"><i class="ri-checkbox-blank-circle-fill"></i></div>
-                                                                    <h5 class="pt-2">1 M</h5>
+                                                                    <h5 class="pt-2">Reward Pertama</h5>
                                                                     <p class="text-muted">Sepeda Motor<br></p>
                                                                     <img class="card-img" src="/images/yamaha_aerox.png" alt="Yamaha Aerox">
                                                                     <div>
                                                                         <?php
                                                                         if ($user->balance_bonus >= 1000000000) {
-                                                                            echo '<a class="btn btn-primary btn-sm" onClick="claimReward()">Claim</a>';
+                                                                            echo '<a href="#" class="btn btn-primary btn-sm">Claim</a>';
                                                                         } else {
                                                                             echo '<a href="#" class="btn btn-light btn-sm" disabled>Claim</a>';
                                                                         }
@@ -409,13 +402,13 @@ foreach ($bonuses as $data) {
                                                             <li class="list-inline-item items-list">
                                                                 <div class="px-4">
                                                                     <div class="event-date badge bg-success"><i class="ri-checkbox-blank-circle-fill"></i></div>
-                                                                    <h5 class="pt-2">10 M</h5>
+                                                                    <h5 class="pt-2">Reward Kedua</h5>
                                                                     <p class="text-muted">Mobil Sigra / Ayla<br></p>
                                                                     <img class="card-img" src="/images/mobil_sigra.png" alt="Yamaha Aerox">
                                                                     <div>
                                                                         <?php
                                                                         if ($user->balance_bonus >= 10000000000) {
-                                                                            echo '<a class="btn btn-primary btn-sm" onClick="claimReward()">Claim</a>';
+                                                                            echo '<a href="#" class="btn btn-primary btn-sm">Claim</a>';
                                                                         } else {
                                                                             echo '<a href="#" class="btn btn-light btn-sm" disabled>Claim</a>';
                                                                         }
@@ -426,7 +419,7 @@ foreach ($bonuses as $data) {
                                                             <li class="list-inline-item items-list">
                                                                 <div class="px-4">
                                                                     <div class="event-date badge bg-danger"><i class="ri-checkbox-blank-circle-line"></i></div>
-                                                                    <h5 class="pt-2">20 M</h5>
+                                                                    <h5 class="pt-2">Reward Ketiga</h5>
                                                                     <p class="text-muted">Mobil Avanza / Xenia<br></p>
                                                                     <img class="card-img" src="/images/mobil_xenia.png" alt="Yamaha Aerox">
                                                                     <div>
@@ -443,13 +436,13 @@ foreach ($bonuses as $data) {
                                                             <li class="list-inline-item items-list">
                                                                 <div class="px-4">
                                                                     <div class="event-date badge bg-warning"><i class="ri-checkbox-blank-circle-line"></i></div>
-                                                                    <h5 class="pt-2">40 M</h5>
+                                                                    <h5 class="pt-2">Reward Keempat</h5>
                                                                     <p class="text-muted">Mobil Fortuner / Pajero</p>
                                                                     <img class="card-img" src="/images/mobil_pajero.png" alt="Yamaha Aerox">
                                                                     <div>
                                                                         <?php
                                                                         if ($user->balance_bonus >= 40000000000) {
-                                                                            echo '<a class="btn btn-primary btn-sm" onClick="claimReward()">Claim</a>';
+                                                                            echo '<a href="#" class="btn btn-primary btn-sm">Claim</a>';
                                                                         } else {
                                                                             echo '<a href="#" class="btn btn-light btn-sm" disabled>Claim</a>';
                                                                         }
@@ -533,8 +526,7 @@ foreach ($bonuses as $data) {
                                     </svg>
                                     <div class="pl-3 border-left">
                                         <h5 class="mb-1">Telepon CS</h5>
-                                        <p class="mb-0">+6591378150</p>
-                                        <p class="mb-0">+6281231365259</p>
+                                        <p class="mb-0">08123456789</p>
                                     </div>
                                 </div>
                             </div>
@@ -737,29 +729,3 @@ foreach ($bonuses as $data) {
         </div>
     </div>
 </footer> -->
-<script>
-    window.setInterval(function() {
-        try {
-            $.pjax.reload({
-                container: "#deposit",
-                async: false,
-                timeout: false
-            });
-        } catch (error) {
-
-        }
-
-    }, 5000);
-    window.setInterval(function() {
-        try {
-            $.pjax.reload({
-                container: "#bonus",
-                async: false,
-                timeout: false
-            });
-        } catch (error) {
-
-        }
-
-    }, 10000);
-</script>

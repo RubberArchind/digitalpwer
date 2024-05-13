@@ -5,12 +5,12 @@ use app\models\User;
 
 /** @var yii\web\View $this */
 
-$this->title = 'Digitalpwer - Terms of Service';
+$this->title = 'digitalpwer';
 $user = User::findOne(Yii::$app->user->id);
 ?>
 
 <!-- Terms of Service -->
-<main id="tos" class="container mt-5 text-muted" style="margin-top: 5% !important;">
+<main id="tos" class="container mt-5 text-muted" style="top: 5vh !important;">
     <h2>Terms of Service</h2>
 
 

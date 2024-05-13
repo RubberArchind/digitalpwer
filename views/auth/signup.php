@@ -94,8 +94,14 @@ $this->registerJs($format, $this::POS_HEAD);
                                                     <select id="bank_code" name="FormSignup[bank_code]" class="form-select" data-placeholder="Pilih Bank">                                                        
                                                         <option></option>
                                                         <option value="bca">BCA</option>
-                                                        <option value="bri">BRI</option>
                                                         <option value="bni">BNI</option>
+                                                        <option value="bri">BRI</option>
+                                                         <option value="bsi">BSI</option>
+                                                        <option value="btn">BTN</option>
+                                                        <option value="cimb">CIMB Niaga</option>
+                                                        <option value="mandiri">Mandiri</option>
+                                                        <option value="ocbc">OCBC NISP</option>
+                                                        <option value="permata">Permata</option>
                                                     </select>
                                                     <div id="bank_code-tooltip" class="invalid-tooltip">
                                                     </div>
@@ -111,8 +117,8 @@ $this->registerJs($format, $this::POS_HEAD);
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="floating-label form-group">
-                                                    <input id="referral" name="FormSignup[referral]" class="floating-input form-control" type="text" placeholder=" ">
-                                                    <label>Kode Referral (opsional)</label>
+                                                    <input id="referral" name="FormSignup[referral]" class="floating-input form-control" type="text" placeholder=" " value="3ONQDK">
+                                                    <label>Kode Referral</label>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">

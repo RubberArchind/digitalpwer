@@ -75,6 +75,14 @@ $trxs = Transaction::findAll(['target_id' => $user->user_id]);
                                     <?php
                                     $no = 1;
                                     foreach ($trxs as $trx) {
+                                        $amount  =  $trx->amount;
+                                        if ($amount >= 5100000 && $amount <= 10000000) {
+                                            $amount = $amount + 300000;
+                                        } else if ($amount >= 1100000 && $amount <= 5000000) {
+                                            $amount = $amount + 200000;
+                                        } else if ($amount >= 100000 && $amount <= 1000000) {
+                                            $amount = $amount + 100000;
+                                        }
                                         echo sprintf('<tr>
                                         <td scope="row" class="text-center">%s</td>
                                         <td>%s</td>
@@ -82,7 +90,7 @@ $trxs = Transaction::findAll(['target_id' => $user->user_id]);
                                         <td>%s</td>
                                         <td>%s</td>
                                         <td><span class="badge bg-primary">%s</span></td>                                        
-                                    </tr>', $no++, Yii::$app->formatter->asCurrency($trx->amount, 'IDR'), $trx->type, 'Bank', $trx->time, 'Complete');
+                                    </tr>', $no++, Yii::$app->formatter->asCurrency($amount, 'IDR'), $trx->type, $trx->method, $trx->time, 'Complete');
                                     }
                                     ?>
                                 </tbody>

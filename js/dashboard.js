@@ -6,14 +6,6 @@ if (document.getElementById("topupModal")) {
     keyboard: false,
   });
 }
-if (document.getElementById("depositModal")) {
-  var depositModal = new bootstrap.Modal(document.getElementById("depositModal"), {
-    keyboard: false,
-  });
-  $("#btnDeposit").on("click", function () {
-    depositModal.toggle();
-  });
-}
 var copyToast = new bootstrap.Toast(document.getElementById("copyToast"));
 
 $("#btnLogout").on("click", function () {
@@ -73,6 +65,7 @@ if (document.getElementById("topupModal")) {
       // }
     },
     (error) => {
+      // The return of a block try / catch
       console.error("ERROR");
     }
   );
@@ -83,7 +76,10 @@ yii2AjaxRequest(
   (data) => {
     console.log("success", data);
     if (data.data.token) {
+      // window.location.replace(data.data.url);
+      // SnapToken acquired from previous step
       snap.pay(data.data.token, {
+        // Optional
         onSuccess: function (result) {
           console.log("success", result);
           if (
@@ -92,10 +88,21 @@ yii2AjaxRequest(
               result.transaction_status == "capture" ||
               result.transaction_status == "settlement")
           ) {
-            depositModal.toggle();
-            alert(
-              "Status: " +
-              ("Success")
+            $.post(
+              "/transaction/add",
+              {
+                id: result.transaction_id,
+                amount: result.gross_amount,
+                method: result.payment_type,
+              },
+              function (data, status) {
+                console.log("dt", data);
+                location.reload();
+                alert(
+                  "Status: " +
+                    (data.data.hasOwnProperty("error") ? "Failed" : status)
+                );
+              }
             );
           }
         },
@@ -132,9 +139,11 @@ yii2AjaxRequest(
       alert("Withdraw gagal, " + data.data.error.errorCode);
     } else {
       alert("Withdraw Berhasil");
+      // window.location.replace('/dashboard');
     }
   },
   (error) => {
+    // The return of a block try / catch
     console.error("ERROR");
   }
 );

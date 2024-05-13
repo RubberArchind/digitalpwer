@@ -5,11 +5,11 @@ use app\models\User;
 
 /** @var yii\web\View $this */
 
-$this->title = 'Digitalpwer - Privacy Policy';
+$this->title = 'Digitalpwer';
 $user = User::findOne(Yii::$app->user->id);
 ?>
 
-<main id="tos" class="container mt-5 text-muted" style="margin-top: 5% !important;">
+<main id="tos" class="container mt-5 text-muted" style="top: 5vh !important;">
     <h2>Privacy Policy</h2>
 
 

@@ -55,9 +55,15 @@ $isGuest = Yii::$app->user->getIsGuest();
         <div class="container d-flex">
 
             <div class="logo mr-auto">
-                <h1 class="text-light"><a href="index.html"><span><?= Html::encode($this->title) ?></span></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
-                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                <a href="/" style="display: inline-block;">
+                    <img src="images/logo.png" alt="" class="img-fluid" style="display: inline-block; vertical-align: middle;">
+                </a>
+                <a href="/" style="display: inline-block;">
+                    <h1 style="display: inline-block; vertical-align: middle; color: #117060 !important;">
+                        <span><?= Html::encode($this->title) ?></span>
+                    </h1>
+                </a>
             </div>
 
             <nav class="nav-menu d-none d-lg-block">
@@ -110,12 +116,23 @@ $isGuest = Yii::$app->user->getIsGuest();
 
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-info">
-                            <h3>Digitalpwer</h3>
+                            <div class="logo mr-auto">
+                                <!-- Uncomment below if you prefer to use an image logo -->
+                                <a href="/" class="logo-wrapper">
+                                    <img src="images/logo.png" alt="" class="img-fluid" style="max-width: 25%;">
+                                </a>
+                                <a href="/" class="title-wrapper">
+                                    <h3 style="color: #117060 !important;"><?= Html::encode($this->title) ?></h3>
+                                </a>
+                            </div>
+
+                            <!--<h3>digitalpwer</h3>-->
                             <p>
-                                Perumahan Citra Fajar Golf blok D. 2106 <br>
-                                GEBANG - SIDOARJO, 61231<br><br>
+                                1, Park Road #25918 <br>
+                                Peoples Park Complex <br>
+                                Singapore 059108<br><br>
                                 <strong>Phone:</strong> +1 5589 55488 55<br>
-                                <strong>Email:</strong> info@example.com<br>
+                                <strong>Email:</strong> info@digitalpwer.com<br>
                             </p>
                             <div class="social-links mt-3">
                                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -164,7 +181,7 @@ $isGuest = Yii::$app->user->getIsGuest();
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>Scaffold</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>digitalpwer</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
@@ -191,7 +208,7 @@ $isGuest = Yii::$app->user->getIsGuest();
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
-    <script src="/js/backend-bundle.min.js"></script>
+    <!--<script src="/js/backend-bundle.min.js"></script>-->
     <?php $this->endBody() ?>
 
 </body>

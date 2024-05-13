@@ -424,3 +424,1268 @@ Array
     [2] => Access denied for user 'digy5127_digitalpweradmin'@'localhost' to database 'digy5127_digitalpwer'
 )
 
+[14-Apr-2024 18:30:09 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/digy5127/public_html/controllers/DashboardController.php on line 127. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/digy5127/public_html/controllers/DashboardController.php on line 127. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'CONTENT_LENGTH' => '148',
+    'HTTP_COOKIE' => '_csrf=11b2a5cab6d4bf7b60b67ce494e8e26cde6c47574143a4d1373664c2c44e7091a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22OdeS3YIwAIMXv87PmjiRgYcAdlXaWKd9%22%3B%7D; PHPSESSID=e5bf37354cb23e4e3d6c9d76b025943f; _identity=2f1405ffff30efcba1498d45514eadb4269cb145e29bdb8c31566423da04e145a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22W9gclYiLQmyVmpZYHQkvGo-F8BVGyMg5%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'app.digitalpwer.com',
+    'HTTP_REFERER' => 'https://app.digitalpwer.com/dashboard',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0',
+    'HTTP_X_CSRF_TOKEN' => 'aBjeHbRBLAaBrbNnMzfLwWbwC9vRTCYceuGSJOC0LzcnfLtOhxhlccDk_j9FD_yRC5piibYVRV0ejcpFt_9LDg==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ORIGIN' => 'https://app.digitalpwer.com',
+    'HTTP_DNT' => '1',
+    'HTTP_SEC_GPC' => '1',
+    'HTTP_SEC_FETCH_DEST' => 'empty',
+    'HTTP_SEC_FETCH_MODE' => 'cors',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'DOCUMENT_ROOT' => '/home/digy5127/public_html/web',
+    'REMOTE_ADDR' => '103.194.174.130',
+    'REMOTE_PORT' => '60852',
+    'SERVER_ADDR' => '103.247.10.238',
+    'SERVER_NAME' => 'app.digitalpwer.com',
+    'SERVER_ADMIN' => 'webmaster@app.digitalpwer.com',
+    'SERVER_PORT' => '443',
+    'REQUEST_SCHEME' => 'https',
+    'REQUEST_URI' => '/dashboard',
+    'REDIRECT_URL' => '/dashboard',
+    'REDIRECT_REQUEST_METHOD' => 'POST',
+    'HTTPS' => 'on',
+    'REDIRECT_STATUS' => '200',
+    'X_SPDY' => 'HTTP3',
+    'SSL_PROTOCOL' => 'QUIC',
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256',
+    'SSL_CIPHER_USEKEYSIZE' => '128',
+    'SSL_CIPHER_ALGKEYSIZE' => '128',
+    'SCRIPT_FILENAME' => '/home/digy5127/public_html/web/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'https://app.digitalpwer.com/dashboard',
+    'SCRIPT_URL' => '/dashboard',
+    'SCRIPT_NAME' => '/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1713094208.899878978729248046875,
+    'REQUEST_TIME' => 1713094208,
+    'argv' => [],
+    'argc' => 0,
+]
+[14-Apr-2024 18:30:22 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/digy5127/public_html/controllers/DashboardController.php on line 127. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/digy5127/public_html/controllers/DashboardController.php on line 127. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'CONTENT_LENGTH' => '163',
+    'HTTP_COOKIE' => '_csrf=11b2a5cab6d4bf7b60b67ce494e8e26cde6c47574143a4d1373664c2c44e7091a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22OdeS3YIwAIMXv87PmjiRgYcAdlXaWKd9%22%3B%7D; PHPSESSID=e5bf37354cb23e4e3d6c9d76b025943f; _identity=2f1405ffff30efcba1498d45514eadb4269cb145e29bdb8c31566423da04e145a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22W9gclYiLQmyVmpZYHQkvGo-F8BVGyMg5%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'app.digitalpwer.com',
+    'HTTP_REFERER' => 'https://app.digitalpwer.com/dashboard',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0',
+    'HTTP_PRIORITY' => 'u=1',
+    'HTTP_X_CSRF_TOKEN' => 'aBjeHbRBLAaBrbNnMzfLwWbwC9vRTCYceuGSJOC0LzcnfLtOhxhlccDk_j9FD_yRC5piibYVRV0ejcpFt_9LDg==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ORIGIN' => 'https://app.digitalpwer.com',
+    'HTTP_DNT' => '1',
+    'HTTP_SEC_GPC' => '1',
+    'HTTP_SEC_FETCH_DEST' => 'empty',
+    'HTTP_SEC_FETCH_MODE' => 'cors',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'DOCUMENT_ROOT' => '/home/digy5127/public_html/web',
+    'REMOTE_ADDR' => '103.194.174.130',
+    'REMOTE_PORT' => '60852',
+    'SERVER_ADDR' => '103.247.10.238',
+    'SERVER_NAME' => 'app.digitalpwer.com',
+    'SERVER_ADMIN' => 'webmaster@app.digitalpwer.com',
+    'SERVER_PORT' => '443',
+    'REQUEST_SCHEME' => 'https',
+    'REQUEST_URI' => '/dashboard',
+    'REDIRECT_URL' => '/dashboard',
+    'REDIRECT_REQUEST_METHOD' => 'POST',
+    'HTTPS' => 'on',
+    'REDIRECT_STATUS' => '200',
+    'X_SPDY' => 'HTTP3',
+    'SSL_PROTOCOL' => 'QUIC',
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256',
+    'SSL_CIPHER_USEKEYSIZE' => '128',
+    'SSL_CIPHER_ALGKEYSIZE' => '128',
+    'SCRIPT_FILENAME' => '/home/digy5127/public_html/web/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'https://app.digitalpwer.com/dashboard',
+    'SCRIPT_URL' => '/dashboard',
+    'SCRIPT_NAME' => '/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1713094222.83232593536376953125,
+    'REQUEST_TIME' => 1713094222,
+    'argv' => [],
+    'argc' => 0,
+]
+[24-Apr-2024 21:03:17 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-129b8d-257471-cc44.MAI); waiting for someone to free some space... (errno: 28 "No space left on device") in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php:1320
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1320): PDOStatement->execute()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(12)
+#11 /home/digy5127/public_html/models/User.php(110): yii\db\BaseActiveRecord::findOne(12)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(698): app\models\User::findIdentity(12)
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(377): yii\web\User->getIdentity()
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getId()
+#16 /home/digy5127/public_html/views/layouts/main.php(27): yii\base\Component->__get('id')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#23 [internal function]: yii\web\ErrorAction->run()
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#27 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#28 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#29 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#30 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-129b8d-257471-cc44.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+The SQL being executed was: SHOW FULL COLUMNS FROM `user` in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SHOW FULL COLUM...')
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(12)
+#11 /home/digy5127/public_html/models/User.php(110): yii\db\BaseActiveRecord::findOne(12)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(698): app\models\User::findIdentity(12)
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(377): yii\web\User->getIdentity()
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getId()
+#16 /home/digy5127/public_html/views/layouts/main.php(27): yii\base\Component->__get('id')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#23 [internal function]: yii\web\ErrorAction->run()
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#27 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#28 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#29 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#30 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1021
+    [2] => Disk full (/tmp/#sql-temptable-129b8d-257471-cc44.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-129b8d-257471-cc43.MAI); waiting for someone to free some space... (errno: 28 "No space left on device") in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php:1320
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1320): PDOStatement->execute()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(12)
+#11 /home/digy5127/public_html/models/User.php(110): yii\db\BaseActiveRecord::findOne(12)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(698): app\models\User::findIdentity(12)
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/filters/AccessRule.php(241): yii\web\User->getIsGuest()
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/filters/AccessRule.php(173): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/filters/AccessControl.php(123): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#19 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Controller.php(219): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('dashboard', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-129b8d-257471-cc43.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+The SQL being executed was: SHOW FULL COLUMNS FROM `user` in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SHOW FULL COLUM...')
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(12)
+#11 /home/digy5127/public_html/models/User.php(110): yii\db\BaseActiveRecord::findOne(12)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(698): app\models\User::findIdentity(12)
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/filters/AccessRule.php(241): yii\web\User->getIsGuest()
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/filters/AccessRule.php(173): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/filters/AccessControl.php(123): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#19 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Controller.php(219): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('dashboard', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1021
+    [2] => Disk full (/tmp/#sql-temptable-129b8d-257471-cc43.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+)
+
+[24-Apr-2024 21:03:48 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-129b8d-2578bd-5b22.MAI); waiting for someone to free some space... (errno: 28 "No space left on device") in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php:1320
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1320): PDOStatement->execute()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#11 /home/digy5127/public_html/views/layouts/main.php(27): yii\db\BaseActiveRecord::findOne(NULL)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#18 [internal function]: yii\web\ErrorAction->run()
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#24 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#25 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-129b8d-2578bd-5b22.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+The SQL being executed was: SHOW FULL COLUMNS FROM `user` in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SHOW FULL COLUM...')
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#11 /home/digy5127/public_html/views/layouts/main.php(27): yii\db\BaseActiveRecord::findOne(NULL)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#18 [internal function]: yii\web\ErrorAction->run()
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#24 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#25 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1021
+    [2] => Disk full (/tmp/#sql-temptable-129b8d-2578bd-5b22.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-129b8d-2578bd-5b21.MAI); waiting for someone to free some space... (errno: 28 "No space left on device") in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php:1320
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1320): PDOStatement->execute()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#11 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#16 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#17 [internal function]: app\controllers\SiteController->actionIndex()
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#24 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-129b8d-2578bd-5b21.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+The SQL being executed was: SHOW FULL COLUMNS FROM `user` in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SHOW FULL COLUM...')
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#11 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#16 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#17 [internal function]: app\controllers\SiteController->actionIndex()
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#24 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1021
+    [2] => Disk full (/tmp/#sql-temptable-129b8d-2578bd-5b21.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+)
+
+[02-May-2024 19:42:08 Asia/Jakarta] An Error occurred while handling another error:
+Error: Class 'Transaction' not found in /home/digy5127/public_html/views/layouts/main.php:28
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#6 [internal function]: yii\web\ErrorAction->run()
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(Error))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(Error))
+#13 {main}
+Previous exception:
+Error: Class 'Transaction' not found in /home/digy5127/public_html/views/layouts/main.php:28
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\DashboardController))
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="co...')
+#4 /home/digy5127/public_html/controllers/DashboardController.php(295): yii\base\Controller->render('transaction')
+#5 [internal function]: app\controllers\DashboardController->actionTransaction()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('transaction', Array)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('dashboard/trans...', Array)
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#12 {main}
+[02-May-2024 19:42:11 Asia/Jakarta] An Error occurred while handling another error:
+Error: Class 'Transaction' not found in /home/digy5127/public_html/views/layouts/main.php:28
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#6 [internal function]: yii\web\ErrorAction->run()
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(Error))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(Error))
+#13 {main}
+Previous exception:
+Error: Class 'Transaction' not found in /home/digy5127/public_html/views/layouts/main.php:28
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\DashboardController))
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="co...')
+#4 /home/digy5127/public_html/controllers/DashboardController.php(295): yii\base\Controller->render('transaction')
+#5 [internal function]: app\controllers\DashboardController->actionTransaction()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('transaction', Array)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('dashboard/trans...', Array)
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#12 {main}
+[02-May-2024 19:51:02 Asia/Jakarta] An Error occurred while handling another error:
+Error: Class 'Transaction' not found in /home/digy5127/public_html/views/layouts/main.php:28
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#6 [internal function]: yii\web\ErrorAction->run()
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(Error))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(Error))
+#13 {main}
+Previous exception:
+Error: Class 'Transaction' not found in /home/digy5127/public_html/views/layouts/main.php:28
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\DashboardController))
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="co...')
+#4 /home/digy5127/public_html/controllers/DashboardController.php(295): yii\base\Controller->render('transaction')
+#5 [internal function]: app\controllers\DashboardController->actionTransaction()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('transaction', Array)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('dashboard/trans...', Array)
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#12 {main}
+[03-May-2024 18:00:55 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/digy5127/public_html/controllers/CallbackController.php on line 77. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/digy5127/public_html/controllers/CallbackController.php on line 77. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'application/json',
+    'CONTENT_TYPE' => 'application/json',
+    'CONTENT_LENGTH' => '732',
+    'HTTP_COOKIE' => 'PHPSESSID=f86b308ecbc08be0526741552e5c1c73; _csrf=18efa8b5fba72cff6ba6815395e9ef945908e29b742f1a4996d5da7eef37d42fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220LydADmMaDfZMd_LZdW8M6_CbwnzypSi%22%3B%7D',
+    'HTTP_HOST' => 'app.digitalpwer.com',
+    'HTTP_USER_AGENT' => 'Veritrans',
+    'DOCUMENT_ROOT' => '/home/digy5127/public_html/web',
+    'REMOTE_ADDR' => '103.194.174.130',
+    'REMOTE_PORT' => '47574',
+    'SERVER_ADDR' => '103.247.10.238',
+    'SERVER_NAME' => 'app.digitalpwer.com',
+    'SERVER_ADMIN' => 'webmaster@app.digitalpwer.com',
+    'SERVER_PORT' => '443',
+    'REQUEST_SCHEME' => 'https',
+    'REQUEST_URI' => '/callback',
+    'REDIRECT_URL' => '/callback',
+    'REDIRECT_REQUEST_METHOD' => 'POST',
+    'HTTPS' => 'on',
+    'REDIRECT_STATUS' => '200',
+    'X_SPDY' => 'HTTP2',
+    'SSL_PROTOCOL' => 'TLSv1.3',
+    'SSL_CIPHER' => 'TLS_AES_256_GCM_SHA384',
+    'SSL_CIPHER_USEKEYSIZE' => '256',
+    'SSL_CIPHER_ALGKEYSIZE' => '256',
+    'SCRIPT_FILENAME' => '/home/digy5127/public_html/web/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'https://app.digitalpwer.com/callback',
+    'SCRIPT_URL' => '/callback',
+    'SCRIPT_NAME' => '/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1714734055.568520069122314453125,
+    'REQUEST_TIME' => 1714734055,
+    'argv' => [],
+    'argc' => 0,
+]
+[08-May-2024 01:37:57 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-39710d-3f26cba-82580.MAI); waiting for someone to free some space... (errno: 28 "No space left on device") in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php:1320
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1320): PDOStatement->execute()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#11 /home/digy5127/public_html/views/layouts/main.php(28): yii\db\BaseActiveRecord::findOne(NULL)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#18 [internal function]: yii\web\ErrorAction->run()
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#24 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#25 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-39710d-3f26cba-82580.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+The SQL being executed was: SHOW FULL COLUMNS FROM `user` in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SHOW FULL COLUM...')
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#11 /home/digy5127/public_html/views/layouts/main.php(28): yii\db\BaseActiveRecord::findOne(NULL)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#18 [internal function]: yii\web\ErrorAction->run()
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#24 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#25 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1021
+    [2] => Disk full (/tmp/#sql-temptable-39710d-3f26cba-82580.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-39710d-3f26cba-8257f.MAI); waiting for someone to free some space... (errno: 28 "No space left on device") in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php:1320
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1320): PDOStatement->execute()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#11 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#16 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#17 [internal function]: app\controllers\SiteController->actionIndex()
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#24 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1021 Disk full (/tmp/#sql-temptable-39710d-3f26cba-8257f.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+The SQL being executed was: SHOW FULL COLUMNS FROM `user` in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SHOW FULL COLUM...')
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#11 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#16 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#17 [internal function]: app\controllers\SiteController->actionIndex()
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#24 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1021
+    [2] => Disk full (/tmp/#sql-temptable-39710d-3f26cba-8257f.MAI); waiting for someone to free some space... (errno: 28 "No space left on device")
+)
+
+[08-May-2024 10:14:32 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'djtLu[e8&%t^', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/layouts/main.php(28): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/layouts/main.php(28): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1040
+    [2] => Too many connections
+)
+
+Previous exception:
+PDOException: SQLSTATE[08004] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'djtLu[e8&%t^', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#20 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#21 [internal function]: app\controllers\SiteController->actionIndex()
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[08004] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#18 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#19 [internal function]: app\controllers\SiteController->actionIndex()
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#26 {main}
+Additional Information:
+Array
+(
+    [0] => 08004
+    [1] => 1040
+    [2] => Too many connections
+)
+
+[08-May-2024 10:14:32 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'djtLu[e8&%t^', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/layouts/main.php(28): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/layouts/main.php(28): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1040
+    [2] => Too many connections
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'djtLu[e8&%t^', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#20 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#21 [internal function]: app\controllers\SiteController->actionIndex()
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/site/tes.php(9): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('tes', Array, Object(app\controllers\SiteController))
+#18 /home/digy5127/public_html/controllers/SiteController.php(65): yii\base\Controller->render('tes')
+#19 [internal function]: app\controllers\SiteController->actionIndex()
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('', Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#26 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1040
+    [2] => Too many connections
+)
+
+[09-May-2024 19:14:32 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'djtLu[e8&%t^', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/layouts/main.php(28): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/layouts/main.php(28): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\n<div class="wr...')
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1040
+    [2] => Too many connections
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'digy5127_digita...', 'djtLu[e8&%t^', NULL)
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#13 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#15 /home/digy5127/public_html/views/layouts/main.php(28): yii\db\BaseActiveRecord::findOne(NULL)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#18 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#19 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/digy5127/public_html/controllers/SiteController.php(101): yii\base\Controller->render('login', Array)
+#21 [internal function]: app\controllers\SiteController->actionLogin()
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#25 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#26 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1040] Too many connections in /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /home/digy5127/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/digy5127/public_html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('user')
+#10 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(463): yii\db\ActiveRecord::getTableSchema()
+#11 /home/digy5127/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(182): yii\db\ActiveRecord::primaryKey()
+#12 /home/digy5127/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(NULL)
+#13 /home/digy5127/public_html/views/layouts/main.php(28): yii\db\BaseActiveRecord::findOne(NULL)
+#14 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(347): require('/home/digy5127/...')
+#15 /home/digy5127/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/digy5127/...', Array)
+#16 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/digy5127/...', Array, Object(app\controllers\SiteController))
+#17 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#18 /home/digy5127/public_html/controllers/SiteController.php(101): yii\base\Controller->render('login', Array)
+#19 [internal function]: app\controllers\SiteController->actionLogin()
+#20 /home/digy5127/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#22 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#23 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#24 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#26 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1040
+    [2] => Too many connections
+)
+
+[11-May-2024 09:50:12 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+[11-May-2024 09:50:43 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+[11-May-2024 09:50:50 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+[11-May-2024 09:52:51 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+[11-May-2024 10:10:24 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+[11-May-2024 10:25:05 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+[11-May-2024 10:31:41 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+[11-May-2024 10:40:59 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+[11-May-2024 10:46:03 Asia/Jakarta] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/digy5127/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent. in /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /home/digy5127/public_html/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /home/digy5127/public_html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/digy5127/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
