@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=digy5127_digitalpwer',
+    'dsn' => 'mysql:host=127.0.0.1;dbname=digy5127_digitalpwer',
     'username' => 'digy5127_digitalpweradmin',
     'password' => 'djtLu[e8&%t^',
     'charset' => 'utf8',

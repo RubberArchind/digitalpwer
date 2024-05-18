@@ -44,12 +44,12 @@ class CallbackController extends \yii\web\Controller
         return parent::beforeAction($action);
     }
 
-    private function calculatebonus($amount, $user)
+    private function calculatebonus($amount, $user, $trxid)
     {
         // Retrieve the user and its level 4 referrer
         // $user = User::findOne(Yii::$app->user->id);
         $levelReferrer = $this->getLevelReferrer($user);
-        // return json_encode(array("userid"=>Yii::$app->user->id,"result"=>$level4Referrer, "data"=>$user->referral));
+        // return json_encode(array("levels" => $levelReferrer));
         if ($levelReferrer) {
             foreach ($levelReferrer as $referrer) {
                 $userReferrer = User::findOne(['user_id' => $referrer['user']]);
@@ -57,13 +57,29 @@ class CallbackController extends \yii\web\Controller
                     // $userReferrer = User::findOne(['user_id'=>$referrer->user]);                
                     // Calculate bonus for level  referrer
                     $bonusAmount = $this->calculateBonusAmount($amount, $referrer['level']);
-                    // return json_encode(array("userid"=>$userReferrer->user_id,"result"=>$bonusAmount, "data"=>$userReferrer->balance_bonus));
 
                     $userReferrer->balance_bonus = $userReferrer->balance_bonus + $bonusAmount;
-                    $userReferrer->save();
+                    $saveStatus = $userReferrer->save(true, ["balance_bonus"]);
+
+                    // return json_encode(array("userid" => $userReferrer->user_id, "result" => $bonusAmount, "data" => $userReferrer->balance_bonus, "status" => $saveStatus, "err" => $saveStatus->error));
 
                     // Log the bonus transaction
-                    $this->logBonusTransaction($userReferrer->user_id, $bonusAmount);
+                    $this->logBonusTransaction($userReferrer->user_id, $bonusAmount, $trxid);
+                    date_default_timezone_set('Australia/Melbourne');
+                    $date = date('Y-m-d H:i:s');
+                    $transaction = new Transaction();
+                    $transaction->scenario = Transaction::SCENARIO_CREATE;
+                    $transaction->attributes = array(
+                        'id' => "".rand(),
+                        'user_id' => $user->user_id,
+                        'target_id' => $userReferrer->user_id,
+                        'method' => 'Internal',
+                        'type' => "BONUS",
+                        'amount' => $amount,
+                        'time' => $date
+                    );
+                    $transaction->validate();
+                    return json_encode(array('status' => $transaction->save(), 'error' => $transaction->getErrors()));
                 }
             }
 
@@ -81,11 +97,17 @@ class CallbackController extends \yii\web\Controller
         $referrer = User::findOne(['user_referral' => $user->referral]);
         $level = 1;
 
+        if ($referrer == null) {
+            return;
+        }
         $referrers = [];
         array_push($referrers, ['user' => $referrer->user_id, 'level' => $level]);
         while ($referrer !== null) { // Check if $referrer is not null instead of $level
             $referrer = User::findOne(['user_referral' => $referrer->referral]);
             $level++;
+            if ($referrer == null) {
+                continue;
+            }
             if ($referrer->user_id !== null) {
                 array_push($referrers, ['user' => $referrer->user_id, 'level' => $level]);
             } else {
@@ -105,7 +127,7 @@ class CallbackController extends \yii\web\Controller
             case 2:
                 return $amount * 0.05; // 5% bonus for level 2
             case 3:
-                return $amount * 0.025; // 2% bonus for level 3
+                return $amount * 0.025; // 2.5% bonus for level 3
             case 4:
                 return $amount * 0.025; // 2.5% bonus for level 4
                 // Add cases for other levels as needed
@@ -114,7 +136,7 @@ class CallbackController extends \yii\web\Controller
         }
     }
 
-    private function logBonusTransaction($userId, $amount)
+    private function logBonusTransaction($userId, $amount, $trxid)
     {
         // Implement code to log bonus transactions to your database
         // For example, you can use Yii2's ActiveRecord to create a new log record
@@ -122,7 +144,8 @@ class CallbackController extends \yii\web\Controller
         $log->attributes = array(
             'user_id' => $userId,
             'type' => 'BONUS',
-            'amount' => $amount
+            'amount' => $amount,
+            'ref' => $trxid
         );
         $log->save();
     }
@@ -174,7 +197,7 @@ class CallbackController extends \yii\web\Controller
                     $amount = $amount - 300000;
                 }
             }
-            $this->calculatebonus($amount, $userTrx);
+            $this->calculatebonus($amount, $userTrx, $notif->transaction_id);
             $convertedString = ucwords(str_replace("_", " ", $type));
             $transaction->attributes = array(
                 'id' => $notif->transaction_id,
@@ -182,7 +205,8 @@ class CallbackController extends \yii\web\Controller
                 'target_id' => $userTrx->user_id,
                 'method' => $convertedString,
                 'type' => "DEPOSIT",
-                'amount' => $amount
+                'amount' => $amount,
+                'time' => $notif->settlement_time
             );
 
             if ($transaction->validate() && $amount > 0) {

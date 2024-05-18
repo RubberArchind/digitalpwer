@@ -26,7 +26,8 @@
         "xendit/xendit-php": "4.3.0",
         "midtrans/midtrans-php": "^2.5",
         "guzzlehttp/guzzle": "^7.8",
-        "ramsey/uuid": "^4.2"
+        "ramsey/uuid": "^4.2",
+        "fightbulc/moment": "^1.34"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

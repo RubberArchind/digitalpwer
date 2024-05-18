@@ -158,20 +158,21 @@ foreach ($bonuses as $data) {
     <div class="container-fluid">
         <div class="row">
             <!-- <?= var_dump($bonus_value); ?> -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card card-block card-stretch card-height">
-                    <div class="card-body">
-                        <div class="top-block d-flex align-items-center justify-content-between">
-                            <h5>Deposit</h5>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="card-body">
+                            <div class="top-block d-flex align-items-center justify-content-between">
+                                <h5>Deposit</h5>
+                            </div>
+                            <?php Pjax::begin(['id' => 'deposit']) ?>
+                            <h3><span class=""><?php echo Yii::$app->formatter->asCurrency($user->balance_deposit, 'IDR'); ?></span></h3>
+                            <?php Pjax::end() ?>
                         </div>
-                        <?php Pjax::begin(['id' => 'deposit']) ?>
-                        <h3><span class=""><?php echo Yii::$app->formatter->asCurrency($user->balance_deposit, 'IDR'); ?></span></h3>
-                        <?php Pjax::end() ?>
                     </div>
                 </div>
-            </div>
 
-            <!-- <div class="col-md-6 col-lg-3">
+                <!-- <div class="col-md-6 col-lg-3">
                     <div class="card card-block card-stretch card-height">
                         <div class="card-body">
                             <div class="top-block d-flex align-items-center justify-content-between">
@@ -190,158 +191,69 @@ foreach ($bonuses as $data) {
                     </div>
                 </div> -->
 
-            <div class="col-md-6 col-lg-3">
-                <div class="card card-block card-stretch card-height">
-                    <div class="card-body">
-                        <div class="top-block d-flex align-items-center justify-content-between">
-                            <h5>Bonus & Cashback</h5>
-                            <!-- <span class="badge badge-success">Today</span> -->
-                        </div>
-                        <?php Pjax::begin(['id' => 'bonus']) ?>
-                        <h3><span><?php echo Yii::$app->formatter->asCurrency($user->balance_bonus, 'IDR'); ?></span></h3>
-                        <?php Pjax::end() ?>
-                        <!-- <div class="d-flex align-items-center justify-content-between mt-1">
+                <div class="col">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="card-body">
+                            <div class="top-block d-flex align-items-center justify-content-between">
+                                <h5>Bonus</h5>
+                                <!-- <span class="badge badge-success">Today</span> -->
+                            </div>
+                            <?php Pjax::begin(['id' => 'bonus']) ?>
+                            <h3><span><?php echo Yii::$app->formatter->asCurrency($user->balance_bonus, 'IDR'); ?></span></h3>
+                            <?php Pjax::end() ?>
+                            <!-- <div class="d-flex align-items-center justify-content-between mt-1">
                             <p class="mb-0">Total Revenue</p>
                             <span class="text-success">85%</span>
                         </div>
                         <div class="iq-progress-bar bg-success-light mt-2">
                             <span class="bg-success iq-progress progress-1" data-percent="85"></span>
                         </div> -->
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card card-block card-stretch card-height">
-                    <div class="card-body">
-                        <div class="top-block d-flex align-items-center justify-content-between">
-                            <h5>Referral </h5>
+                <div class="col">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="card-body">
+                            <div class="top-block d-flex align-items-center justify-content-between">
+                                <h5>Cashback</h5>
+                                <!-- <span class="badge badge-success">Today</span> -->
+                            </div>
+                            <?php Pjax::begin(['id' => 'bonus']) ?>
+                            <h3><span><?php echo Yii::$app->formatter->asCurrency($user->balance_cashback, 'IDR'); ?></span></h3>
+                            <?php Pjax::end() ?>
+                            <!-- <div class="d-flex align-items-center justify-content-between mt-1">
+                            <p class="mb-0">Total Revenue</p>
+                            <span class="text-success">85%</span>
                         </div>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="refCode" disabled="" value="<?php echo $user->user_referral; ?>">
-                            <div class="input-group-append">
-                                <button id="copyToastBtn" class="btn btn-success text-center d-flex" type="button" onclick="copyRef()"><i class="las la-copy font-size-20 align-items-center" style="margin-top: 0.5em;"></i></button>
+                        <div class="iq-progress-bar bg-success-light mt-2">
+                            <span class="bg-success iq-progress progress-1" data-percent="85"></span>
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="card-body">
+                            <div class="top-block d-flex align-items-center justify-content-between">
+                                <h5>Funds</h5>
+                            </div>
+                            <div class="btn-group btn-group-toggle btn-group-edges">
+                                <!-- <div class="row gx-1"> -->
+                                <button id="btnDeposit" type="button" class="mt-2 btn btn-success"><i class="ri-upload-2-line"></i>Deposit</button>
+                                <button type="button" class="mt-2 btn btn-danger " data-toggle="modal" data-target="#withdrawModal"><i class="ri-download-2-line"></i>Withdraw</button>
+                                <!-- </div>                             -->
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card card-block card-stretch card-height">
-                    <div class="card-body">
-                        <div class="top-block d-flex align-items-center justify-content-between">
-                            <h5>Funds</h5>
-                        </div>
-                        <div class="btn-group btn-group-toggle btn-group-edges">
-                            <!-- <div class="row gx-1"> -->
-                            <button id="btnDeposit" type="button" class="mt-2 btn btn-success"><i class="ri-upload-2-line"></i>Deposit</button>
-                            <button type="button" class="mt-2 btn btn-danger " data-toggle="modal" data-target="#withdrawModal"><i class="ri-download-2-line"></i>Withdraw</button>
-                            <!-- </div>                             -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
 
             <div class="col-xl-8">
                 <div class="card-transparent card-block card-stretch card-height">
                     <div class="card-body p-0">
-                        <!-- OVERVIEW SECTION -->
-                        <!-- <div class="card">
-                            <div class="card-header d-flex justify-content-between">
-                                <div class="header-title">
-                                    <h4 class="card-title">Overview Progress</h4>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <ul class="list-inline p-0 mb-0">
-                                    <li class="mb-1">
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <p class="mb-0">UX / UI Design</p>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="iq-progress-bar bg-secondary-light">
-                                                        <span class="bg-secondary iq-progress progress-1" data-percent="65"></span>
-                                                    </div>
-                                                    <span class="ml-3">65%</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="iq-media-group text-sm-right">
-                                                    <a href="#" class="iq-media">
-                                                        <img class="img-fluid avatar-40 rounded-circle" src="/images/user/05.jpg" alt="">
-                                                    </a>
-                                                    <a href="#" class="iq-media">
-                                                        <img class="img-fluid avatar-40 rounded-circle" src="/images/user/06.jpg" alt="">
-                                                    </a>
-                                                    <a href="#" class="iq-media">
-                                                        <img class="img-fluid avatar-40 rounded-circle" src="/images/user/07.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="mb-1">
-                                        <div class="d-flex align-items-center justify-content-between row">
-                                            <div class="col-sm-3">
-                                                <p class="mb-0">Development</p>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="iq-progress-bar bg-primary-light">
-                                                        <span class="bg-primary iq-progress progress-1" data-percent="59"></span>
-                                                    </div>
-                                                    <span class="ml-3">59%</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="iq-media-group text-sm-right">
-                                                    <a href="#" class="iq-media">
-                                                        <img class="img-fluid avatar-40 rounded-circle" src="/images/user/08.jpg" alt="">
-                                                    </a>
-                                                    <a href="#" class="iq-media">
-                                                        <img class="img-fluid avatar-40 rounded-circle" src="/images/user/09.jpg" alt="">
-                                                    </a>
-                                                    <a href="#" class="iq-media">
-                                                        <img class="img-fluid avatar-40 rounded-circle" src="/images/user/04.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="d-flex align-items-center justify-content-between row">
-                                            <div class="col-sm-3">
-                                                <p class="mb-0">Testing</p>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="iq-progress-bar bg-warning-light">
-                                                        <span class="bg-warning iq-progress progress-1" data-percent="78"></span>
-                                                    </div>
-                                                    <span class="ml-3">78%</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="iq-media-group text-sm-right">
-                                                    <a href="#" class="iq-media">
-                                                        <img class="img-fluid avatar-40 rounded-circle" src="/images/user/01.jpg" alt="">
-                                                    </a>
-                                                    <a href="#" class="iq-media">
-                                                        <img class="img-fluid avatar-40 rounded-circle" src="/images/user/02.jpg" alt="">
-                                                    </a>
-                                                    <a href="#" class="iq-media">
-                                                        <img class="img-fluid avatar-40 rounded-circle" src="/images/user/03.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> -->
-
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="card">
@@ -473,6 +385,21 @@ foreach ($bonuses as $data) {
             </div>
 
             <div class="col-xl-4">
+                <div class="col">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="card-body">
+                            <div class="top-block d-flex align-items-center justify-content-between">
+                                <h5>Referral </h5>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="refCode" disabled="" value="<?php echo $user->user_referral; ?>">
+                                <div class="input-group-append">
+                                    <button id="copyToastBtn" class="btn btn-success text-center d-flex" type="button" onclick="copyRef()"><i class="las la-copy font-size-20 align-items-center" style="margin-top: 0.5em;"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="card card-block card-stretch card-height">
                     <div class="card-body">
                         <div class="card border-bottom pb-2 shadow-none">

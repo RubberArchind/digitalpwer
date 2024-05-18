@@ -31,7 +31,7 @@ class Logs extends \yii\db\ActiveRecord
         return [
             [['amount'], 'number'],
             [['time'], 'safe'],
-            [['user_id'], 'string', 'max' => 255],
+            [['user_id','ref'], 'string', 'max' => 255],
             [['type'], 'string', 'max' => 50],
         ];
     }
@@ -47,6 +47,7 @@ class Logs extends \yii\db\ActiveRecord
             'type' => Yii::t('app', 'Type'),
             'amount' => Yii::t('app', 'Amount'),
             'time' => Yii::t('app', 'Time'),
+            'time' => Yii::t('app', 'REF'),
         ];
     }
 

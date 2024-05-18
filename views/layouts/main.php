@@ -26,14 +26,15 @@ $state = $this->params['state'];
 global $user;
 
 $user = User::findOne(Yii::$app->user->id);
-$trxs = Transaction::findAll(['target_id' => $user->user_id]);
-$totaldeposit = 0;
-foreach ($trxs as $trx) {
-    if($trx->type=="DEPOSIT"){
-        $totaldeposit += $trx->amount;
+if ($user) {
+    $trxs = Transaction::findAll(['target_id' => $user->user_id]);
+    $totaldeposit = 0;
+    foreach ($trxs as $trx) {
+        if ($trx->type == "DEPOSIT") {
+            $totaldeposit += $trx->amount;
+        }
     }
 }
-
 if ($state == "dashboard") {
     $this->registerLinkTag(['rel' => 'stylesheet', 'href' => Yii::getAlias('@web/css/backend-plugin.min.css')]);
     $this->registerLinkTag(['rel' => 'stylesheet', 'href' => Yii::getAlias('@web/css/backend.css?v=1.0.0')]);
@@ -44,7 +45,7 @@ if ($state == "dashboard") {
     $this->registerLinkTag(['rel' => 'stylesheet', 'href' => Yii::getAlias('@web/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css')]);
     $this->registerJsFile("https://cdn.jsdelivr.net/npm/chart.js", ['position' => $this::POS_READY]);
     $this->registerJsFile("@web/js/yii2AjaxRequest.js", ['depends' => 'yii\web\JqueryAsset', 'position' => $this::POS_READY]);
-    
+
     $this->registerCssFile("@web/css/timeline.css");
     $this->registerCssFile("https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css");
     $this->registerCssFile("https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css");
@@ -54,9 +55,8 @@ if ($state == "dashboard") {
     $this->registerJsFile("https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.0.10/jspdf.plugin.autotable.min.js", ['depends' => 'yii\web\JqueryAsset', 'position' => $this::POS_END]);
     $this->registerJsFile("@web/js/tableHTMLExport.js", ['depends' => 'yii\web\JqueryAsset', 'position' => $this::POS_END]);
     $this->registerJsFile("https://cdn.datatables.net/2.0.3/js/dataTables.js", ['depends' => 'yii\web\JqueryAsset', 'position' => $this::POS_END]);
-    $this->registerJsFile("@web/js/dashboard.js", ['depends' => 'yii\web\JqueryAsset', 'position' => $this::POS_END]);    
+    $this->registerJsFile("@web/js/dashboard.js", ['depends' => 'yii\web\JqueryAsset', 'position' => $this::POS_END]);
     $this->registerJs("$('#trx-table').DataTable()");
-
 } else if ($state == "landing") {
     $this->registerLinkTag(['rel' => 'stylesheet', 'href' => Yii::getAlias('@web/css/landing-style.css')]);
     $this->registerLinkTag(['rel' => 'stylesheet', 'href' => Yii::getAlias('@web/vendor/icofont/icofont.min.css')]);
@@ -184,32 +184,32 @@ if ($state == "dashboard") {
                                 </a>
                             </li>
 
-                            <?php if($totaldeposit>=100000){ ?>
-                            <li class="<?php echo Yii::$app->requestedRoute == "dashboard/topup" ? "active" : "" ?>">
-                                <!-- <a href="/dashboard/topup" class="svg-icon"> -->
-                                <a class="svg-icon" onClick="onWorking()">
-                                    <svg class="svg-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.87617 3.75H19.1238L21 8.86683V10.5C21 11.2516 20.7177 11.9465 20.25 12.4667V21H3.75V12.4667C3.28234 11.9465 3 11.2516 3 10.5V8.86683L4.87617 3.75ZM18.1875 13.3929C18.3807 13.3929 18.5688 13.3731 18.75 13.3355V19.5H15V15H9L9 19.5H5.25V13.3355C5.43122 13.3731 5.61926 13.3929 5.8125 13.3929C6.63629 13.3929 7.36559 13.0334 7.875 12.4667C8.38441 13.0334 9.11371 13.3929 9.9375 13.3929C10.7613 13.3929 11.4906 13.0334 12 12.4667C12.5094 13.0334 13.2387 13.3929 14.0625 13.3929C14.8863 13.3929 15.6156 13.0334 16.125 12.4667C16.6344 13.0334 17.3637 13.3929 18.1875 13.3929ZM10.5 19.5H13.5V16.5H10.5L10.5 19.5ZM19.5 9.75V10.5C19.5 11.2965 18.8856 11.8929 18.1875 11.8929C17.4894 11.8929 16.875 11.2965 16.875 10.5V9.75H19.5ZM19.1762 8.25L18.0762 5.25H5.92383L4.82383 8.25H19.1762ZM4.5 9.75V10.5C4.5 11.2965 5.11439 11.8929 5.8125 11.8929C6.51061 11.8929 7.125 11.2965 7.125 10.5V9.75H4.5ZM8.625 9.75V10.5C8.625 11.2965 9.23939 11.8929 9.9375 11.8929C10.6356 11.8929 11.25 11.2965 11.25 10.5V9.75H8.625ZM12.75 9.75V10.5C12.75 11.2965 13.3644 11.8929 14.0625 11.8929C14.7606 11.8929 15.375 11.2965 15.375 10.5V9.75H12.75Z" fill="#080341" />
-                                    </svg>
-                                    <span class="ml-4">Top Up</span>
-                                </a>
-                            </li>
-                            <li class="<?php echo Yii::$app->requestedRoute == "dashboard/earn" ? "active" : "" ?>">
-                                <a href="/dashboard/earn" class="svg-icon">
-                                    <svg class="svg-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
-                                        <path d="M5,22a4,4,0,0,0,3.858-3h6.284a4.043,4.043,0,1,0,2.789-4.837L14.816,8.836a4,4,0,1,0-5.63,0L6.078,14.166A3.961,3.961,0,0,0,5,14a4,4,0,0,0,0,8Zm14-6a2,2,0,1,1-2,2A2,2,0,0,1,19,16ZM12,4a2,2,0,1,1-2,2A2,2,0,0,1,12,4ZM10.922,9.834A3.961,3.961,0,0,0,12,10a3.909,3.909,0,0,0,1.082-.168l3.112,5.323A4,4,0,0,0,15.142,17H8.858a3.994,3.994,0,0,0-1.044-1.838ZM5,16a2,2,0,1,1-2,2A2,2,0,0,1,5,16Z" />
-                                    </svg>
-                                    <span class="ml-4">Refer & Earn</span>
-                                </a>
-                            </li>
-                            <li class="<?php echo Yii::$app->requestedRoute == "dashboard/transaction" ? "active" : "" ?>">
-                                <a href="/dashboard/transaction" class="svg-icon">
-                                    <svg class="svg-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
-                                        <path d="M17.0020048,13 C17.5542895,13 18.0020048,13.4477153 18.0020048,14 C18.0020048,14.5128358 17.6159646,14.9355072 17.1186259,14.9932723 L17.0020048,15 L5.41700475,15 L8.70911154,18.2928932 C9.0695955,18.6533772 9.09732503,19.2206082 8.79230014,19.6128994 L8.70911154,19.7071068 C8.34862757,20.0675907 7.78139652,20.0953203 7.38910531,19.7902954 L7.29489797,19.7071068 L2.29489797,14.7071068 C1.69232289,14.1045317 2.07433707,13.0928192 2.88837381,13.0059833 L3.00200475,13 L17.0020048,13 Z M16.6128994,4.20970461 L16.7071068,4.29289322 L21.7071068,9.29289322 C22.3096819,9.8954683 21.9276677,10.9071808 21.1136309,10.9940167 L21,11 L7,11 C6.44771525,11 6,10.5522847 6,10 C6,9.48716416 6.38604019,9.06449284 6.88337887,9.00672773 L7,9 L18.585,9 L15.2928932,5.70710678 C14.9324093,5.34662282 14.9046797,4.77939176 15.2097046,4.38710056 L15.2928932,4.29289322 C15.6533772,3.93240926 16.2206082,3.90467972 16.6128994,4.20970461 Z" />
-                                    </svg>
-                                    <span class="ml-4">Transactions</span>
-                                </a>
-                            </li>
+                            <?php if ($totaldeposit >= 100000) { ?>
+                                <li class="<?php echo Yii::$app->requestedRoute == "dashboard/topup" ? "active" : "" ?>">
+                                    <!-- <a href="/dashboard/topup" class="svg-icon"> -->
+                                    <a class="svg-icon" onClick="onWorking()">
+                                        <svg class="svg-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.87617 3.75H19.1238L21 8.86683V10.5C21 11.2516 20.7177 11.9465 20.25 12.4667V21H3.75V12.4667C3.28234 11.9465 3 11.2516 3 10.5V8.86683L4.87617 3.75ZM18.1875 13.3929C18.3807 13.3929 18.5688 13.3731 18.75 13.3355V19.5H15V15H9L9 19.5H5.25V13.3355C5.43122 13.3731 5.61926 13.3929 5.8125 13.3929C6.63629 13.3929 7.36559 13.0334 7.875 12.4667C8.38441 13.0334 9.11371 13.3929 9.9375 13.3929C10.7613 13.3929 11.4906 13.0334 12 12.4667C12.5094 13.0334 13.2387 13.3929 14.0625 13.3929C14.8863 13.3929 15.6156 13.0334 16.125 12.4667C16.6344 13.0334 17.3637 13.3929 18.1875 13.3929ZM10.5 19.5H13.5V16.5H10.5L10.5 19.5ZM19.5 9.75V10.5C19.5 11.2965 18.8856 11.8929 18.1875 11.8929C17.4894 11.8929 16.875 11.2965 16.875 10.5V9.75H19.5ZM19.1762 8.25L18.0762 5.25H5.92383L4.82383 8.25H19.1762ZM4.5 9.75V10.5C4.5 11.2965 5.11439 11.8929 5.8125 11.8929C6.51061 11.8929 7.125 11.2965 7.125 10.5V9.75H4.5ZM8.625 9.75V10.5C8.625 11.2965 9.23939 11.8929 9.9375 11.8929C10.6356 11.8929 11.25 11.2965 11.25 10.5V9.75H8.625ZM12.75 9.75V10.5C12.75 11.2965 13.3644 11.8929 14.0625 11.8929C14.7606 11.8929 15.375 11.2965 15.375 10.5V9.75H12.75Z" fill="#080341" />
+                                        </svg>
+                                        <span class="ml-4">Top Up</span>
+                                    </a>
+                                </li>
+                                <li class="<?php echo Yii::$app->requestedRoute == "dashboard/earn" ? "active" : "" ?>">
+                                    <a href="/dashboard/earn" class="svg-icon">
+                                        <svg class="svg-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                            <path d="M5,22a4,4,0,0,0,3.858-3h6.284a4.043,4.043,0,1,0,2.789-4.837L14.816,8.836a4,4,0,1,0-5.63,0L6.078,14.166A3.961,3.961,0,0,0,5,14a4,4,0,0,0,0,8Zm14-6a2,2,0,1,1-2,2A2,2,0,0,1,19,16ZM12,4a2,2,0,1,1-2,2A2,2,0,0,1,12,4ZM10.922,9.834A3.961,3.961,0,0,0,12,10a3.909,3.909,0,0,0,1.082-.168l3.112,5.323A4,4,0,0,0,15.142,17H8.858a3.994,3.994,0,0,0-1.044-1.838ZM5,16a2,2,0,1,1-2,2A2,2,0,0,1,5,16Z" />
+                                        </svg>
+                                        <span class="ml-4">Refer & Earn</span>
+                                    </a>
+                                </li>
+                                <li class="<?php echo Yii::$app->requestedRoute == "dashboard/transaction" ? "active" : "" ?>">
+                                    <a href="/dashboard/transaction" class="svg-icon">
+                                        <svg class="svg-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                            <path d="M17.0020048,13 C17.5542895,13 18.0020048,13.4477153 18.0020048,14 C18.0020048,14.5128358 17.6159646,14.9355072 17.1186259,14.9932723 L17.0020048,15 L5.41700475,15 L8.70911154,18.2928932 C9.0695955,18.6533772 9.09732503,19.2206082 8.79230014,19.6128994 L8.70911154,19.7071068 C8.34862757,20.0675907 7.78139652,20.0953203 7.38910531,19.7902954 L7.29489797,19.7071068 L2.29489797,14.7071068 C1.69232289,14.1045317 2.07433707,13.0928192 2.88837381,13.0059833 L3.00200475,13 L17.0020048,13 Z M16.6128994,4.20970461 L16.7071068,4.29289322 L21.7071068,9.29289322 C22.3096819,9.8954683 21.9276677,10.9071808 21.1136309,10.9940167 L21,11 L7,11 C6.44771525,11 6,10.5522847 6,10 C6,9.48716416 6.38604019,9.06449284 6.88337887,9.00672773 L7,9 L18.585,9 L15.2928932,5.70710678 C14.9324093,5.34662282 14.9046797,4.77939176 15.2097046,4.38710056 L15.2928932,4.29289322 C15.6533772,3.93240926 16.2206082,3.90467972 16.6128994,4.20970461 Z" />
+                                        </svg>
+                                        <span class="ml-4">Transactions</span>
+                                    </a>
+                                </li>
                             <?php } ?>
                         </ul>
                     </nav>
@@ -223,7 +223,7 @@ if ($state == "dashboard") {
                             <i class="ri-menu-line wrapper-menu"></i>
                             <a href="#" class="header-logo">
                                 <img src="/images/logo.png" alt="logo">
-                                <h3 class="logo-title light-logo" style="color: #117060 !important;"><?= Html::encode(" ".$this->title) ?></h3>
+                                <h3 class="logo-title light-logo" style="color: #117060 !important;"><?= Html::encode(" " . $this->title) ?></h3>
                             </a>
                         </div>
                         <div class="navbar-breadcrumb">

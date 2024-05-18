@@ -15,7 +15,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM cashback WHERE day_left!=0";
+$sql = "SELECT * FROM user";
 
 $result = $conn->query($sql);
 
@@ -26,19 +26,15 @@ if ($result !== false && $result->num_rows > 0) {
 
     // Fetch each row from the result set
     while ($row = $result->fetch_assoc()) {
-        $dayleft = $row['day_left'];
-        if ($dayleft > 0) {
-            //update balance_bonus user   
-            // $m = new \Moment\Moment($row['start_date'], 'CET');
-            // $c = $m->cloning()->addDays($dayleft);
-            $sql2 = sprintf("UPDATE user SET balance_cashback = balance_cashback + %f WHERE user_id='%s'", $row['amount'] * 0.1, $row['user_id']);
-            $conn->query($sql2);
-            $sql3 = sprintf("INSERT INTO logs(user_id, type, amount) VALUES ('%s', '%s', %f)", $row['user_id'], 'CASHBACK', $row['amount'] * 0.1);
-            $conn->query($sql3);
-            $sql4 = sprintf("UPDATE cashback SET day_left = day_left-1 WHERE id = '%s'", $row['id']);
-            $conn->query($sql4);
-            $rows[] = array("day" => $dayleft, "user" => $row['user_id']);
-        }
+        $sql2 = sprintf("SELECT SUM(amount) FROM logs WHERE type='BONUS' AND user_id='%s'", $row['user_id']);
+        $result2 = $conn->query($sql2);
+        if ($result2 !== false && $result2->num_rows > 0) {
+            $row2 = $result2->fetch_assoc();
+            $sql3 = sprintf("SELECT SUM(amount) FROM logs WHERE type='CASHBACK' AND user_id='%s'", $row['user_id']);
+            $result3 = $conn->query($sql3);
+            $row3 = $result3->fetch_assoc();
+            $rows[] = array("name"=>$row['full_name'], "bonus"=>$row2['SUM(amount)'], "cashback"=>$row3['SUM(amount)']);
+        }        
     }
 
     header('Content-Type: application/json');

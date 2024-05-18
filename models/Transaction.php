@@ -36,10 +36,9 @@ class Transaction extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'user_id', 'target_id', 'method', 'type', 'amount'], 'required'],
-            [['type'], 'string'],
+            [['id', 'user_id', 'target_id', 'method', 'type', 'amount', 'time'], 'required'],
+            [['type','time'], 'string'],
             [['amount'], 'number'],
-            [['time'], 'safe'],
             [['id', 'user_id', 'target_id'], 'string', 'max' => 255],
             [['id'], 'unique'],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'user_id']],
@@ -49,7 +48,7 @@ class Transaction extends \yii\db\ActiveRecord
     public function scenarios()
     {
         $scenarios = parent::scenarios();
-        $scenarios['create'] = ['id', 'user_id', 'target_id', 'method', 'type', 'amount'];
+        $scenarios['create'] = ['id', 'user_id', 'target_id', 'method', 'type', 'amount', 'time'];
         return $scenarios;
     }
 
