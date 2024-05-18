@@ -44,7 +44,7 @@ class CallbackController extends \yii\web\Controller
         return parent::beforeAction($action);
     }
 
-    private function calculatebonus($amount, $user, $trxid)
+    private function calculatebonus($amount, $user, $trxid, $timestamp)
     {
         // Retrieve the user and its level 4 referrer
         // $user = User::findOne(Yii::$app->user->id);
@@ -64,7 +64,7 @@ class CallbackController extends \yii\web\Controller
                     // return json_encode(array("userid" => $userReferrer->user_id, "result" => $bonusAmount, "data" => $userReferrer->balance_bonus, "status" => $saveStatus, "err" => $saveStatus->error));
 
                     // Log the bonus transaction
-                    $this->logBonusTransaction($userReferrer->user_id, $bonusAmount, $trxid);
+                    $this->logBonusTransaction($userReferrer->user_id, $bonusAmount, $trxid, $timestamp);
                     date_default_timezone_set('Australia/Melbourne');
                     $date = date('Y-m-d H:i:s');
                     $transaction = new Transaction();
@@ -76,7 +76,7 @@ class CallbackController extends \yii\web\Controller
                         'method' => 'Internal',
                         'type' => "BONUS",
                         'amount' => $amount,
-                        'time' => $date
+                        'time' => $timestamp
                     );
                     $transaction->validate();
                     return json_encode(array('status' => $transaction->save(), 'error' => $transaction->getErrors()));
@@ -136,7 +136,7 @@ class CallbackController extends \yii\web\Controller
         }
     }
 
-    private function logBonusTransaction($userId, $amount, $trxid)
+    private function logBonusTransaction($userId, $amount, $trxid, $timestamp)
     {
         // Implement code to log bonus transactions to your database
         // For example, you can use Yii2's ActiveRecord to create a new log record
@@ -145,6 +145,7 @@ class CallbackController extends \yii\web\Controller
             'user_id' => $userId,
             'type' => 'BONUS',
             'amount' => $amount,
+            'time'=> $timestamp,
             'ref' => $trxid
         );
         $log->save();
@@ -197,7 +198,7 @@ class CallbackController extends \yii\web\Controller
                     $amount = $amount - 300000;
                 }
             }
-            $this->calculatebonus($amount, $userTrx, $notif->transaction_id);
+            $this->calculatebonus($amount, $userTrx, $notif->transaction_id, $notif->settlement_time);
             $convertedString = ucwords(str_replace("_", " ", $type));
             $transaction->attributes = array(
                 'id' => $notif->transaction_id,

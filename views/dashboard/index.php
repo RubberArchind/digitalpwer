@@ -191,7 +191,7 @@ foreach ($bonuses as $data) {
                     </div>
                 </div> -->
 
-                <div class="col">
+                <div class="col-md-6 col-lg-3">
                     <div class="card card-block card-stretch card-height">
                         <div class="card-body">
                             <div class="top-block d-flex align-items-center justify-content-between">
@@ -211,7 +211,7 @@ foreach ($bonuses as $data) {
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-md-6 col-lg-3">
                     <div class="card card-block card-stretch card-height">
                         <div class="card-body">
                             <div class="top-block d-flex align-items-center justify-content-between">
@@ -231,7 +231,7 @@ foreach ($bonuses as $data) {
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-md-6 col-lg-3">
                     <div class="card card-block card-stretch card-height">
                         <div class="card-body">
                             <div class="top-block d-flex align-items-center justify-content-between">

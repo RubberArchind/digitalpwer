@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM transaction";
+$sql = "SELECT * FROM transaction WHERE type='DEPOSIT'";
 
 $result = $conn->query($sql);
 
