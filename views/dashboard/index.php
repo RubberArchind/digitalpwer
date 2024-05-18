@@ -432,7 +432,7 @@ foreach ($bonuses as $data) {
 
                                     <div class="pl-3 border-left">
                                         <h5 class="mb-1">Announcement</h5>
-                                        <p class="mb-0">-</p>
+                                        <p class="mb-0">Kami sedang melakukan perbaikan, berlangsung hingga 18-05-2024 22:00, harap abaikan jika ada error atau aneh.</p>
                                     </div>
                                 </div>
                             </div>
