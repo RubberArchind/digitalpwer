@@ -127,11 +127,12 @@ yii2AjaxRequest(
   "#withdraw-form",
   configsTwo,
   (data) => {
-    console.log("dt", data.data);
+    // console.log("dt", data.data);
     if (data.data.error) {
       alert("Withdraw gagal, " + data.data.error.errorCode);
     } else {
-      alert("Withdraw Berhasil");
+      alert("Permintaan withdraw anda berhasil diproses, dana akan masuk kurang lebih 1x24 Jam, jika melebihi 1x24 jam silahkan hubungi CS");
+      location.reload();
     }
   },
   (error) => {

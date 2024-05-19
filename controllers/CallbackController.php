@@ -70,7 +70,7 @@ class CallbackController extends \yii\web\Controller
                     $transaction = new Transaction();
                     $transaction->scenario = Transaction::SCENARIO_CREATE;
                     $transaction->attributes = array(
-                        'id' => "".rand(),
+                        'id' => "" . rand(),
                         'user_id' => $user->user_id,
                         'target_id' => $userReferrer->user_id,
                         'method' => 'Internal',
@@ -79,7 +79,8 @@ class CallbackController extends \yii\web\Controller
                         'time' => $timestamp
                     );
                     $transaction->validate();
-                    return json_encode(array('status' => $transaction->save(), 'error' => $transaction->getErrors()));
+                    $transaction->save();
+                    // return json_encode(array('status' => $transaction->save(), 'error' => $transaction->getErrors()));
                 }
             }
 
@@ -102,7 +103,7 @@ class CallbackController extends \yii\web\Controller
         }
         $referrers = [];
         array_push($referrers, ['user' => $referrer->user_id, 'level' => $level]);
-        while ($referrer !== null) { // Check if $referrer is not null instead of $level
+        while ($referrer !== null) { // Check if $referrer is not null instead of $level            
             $referrer = User::findOne(['user_referral' => $referrer->referral]);
             $level++;
             if ($referrer == null) {
@@ -145,7 +146,7 @@ class CallbackController extends \yii\web\Controller
             'user_id' => $userId,
             'type' => 'BONUS',
             'amount' => $amount,
-            'time'=> $timestamp,
+            'time' => $timestamp,
             'ref' => $trxid
         );
         $log->save();
@@ -198,6 +199,7 @@ class CallbackController extends \yii\web\Controller
                     $amount = $amount - 300000;
                 }
             }
+
             $this->calculatebonus($amount, $userTrx, $notif->transaction_id, $notif->settlement_time);
             $convertedString = ucwords(str_replace("_", " ", $type));
             $transaction->attributes = array(

@@ -14,6 +14,7 @@ use yii\base\Model;
 class WithdrawForm extends Model
 {
     public $amount;
+    public $source;
 
     /**
      * @return array the validation rules.
@@ -22,7 +23,7 @@ class WithdrawForm extends Model
     {
         return [
             // amount is required and should be a string consisting of only digits
-            [['amount'], 'required'],
+            [['amount', 'source'], 'required'],
         ];
     }
 

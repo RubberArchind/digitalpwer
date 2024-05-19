@@ -126,7 +126,6 @@ foreach ($bonuses as $data) {
                     <?php
                     echo MaskMoney::widget([
                         'name' => 'WithdrawForm[amount]',
-                        'value' => 200000,
                         'options' => [
                             'placeholder' => 'Amount'
                         ],
@@ -141,6 +140,14 @@ foreach ($bonuses as $data) {
                         ],
                     ]);
                     ?>
+                </div>
+
+                <p>Withdraw dari</p>
+                <div class="input-group mb-4">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="WithdrawForm[source]">
+                        <option value="bonus" selected>Bonus</option>
+                        <option value="cashback">Cashback</option>
+                    </select>
                 </div>
                 <p>* Proses withdraw akan otomatis masuk dalam 1-5 menit</p>
                 <p>** Jika dalam waktu 5 menit deposit belum masuk hubungi CS</p>

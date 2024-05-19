@@ -13,6 +13,7 @@ use app\models\TopupForm;
 use app\models\WithdrawForm;
 use app\models\User;
 use app\models\TrxMap;
+use app\models\Withdraw;
 use Ramsey\Uuid\Uuid;
 
 // XENDIT SETUP
@@ -66,7 +67,7 @@ class DashboardController extends Controller
         ];
     }
 
-    
+
     /**
      * {@inheritdoc}
      */
@@ -152,11 +153,14 @@ class DashboardController extends Controller
                     return json_encode($e->getMessage());
                 }
             } else {
-                // THIS PART FOR WITHDRAW
+                // THIS PART FOR WITHDRAW                
+                $modelForm->load($postData);
+
                 $NOW = strtotime('NOW');
                 $user = User::findOne(Yii::$app->user->id);
-                if ($user->balance_deposit <= 200000) {
-                    return json_encode(array("isValid" => false,  "error" => array("errorCode" => "Withdraw minimal 200,000")));
+                $source = $modelForm->source == "bonus" ? "balance_bonus" : "balance_cashback";
+                if ($modelForm->amount < 50000) {
+                    return json_encode(array("isValid" => false,  "error" => array("errorCode" => "Withdraw minimal 50,000")));
                 }
                 $usertime = strtotime($user->signup_time);
 
@@ -167,43 +171,62 @@ class DashboardController extends Controller
                 $month2 = date("n", $usertime);
 
                 $total_months = abs(($year2 - $year1) * 12 + ($month2 - $month1));
+                $days_difference = ($NOW - $usertime) / (60 * 60 * 24);
 
-                if ($total_months <= 1) {
-                    return json_encode(array("isValid" => false,  "error" => array("errorCode" => "Anda harus terdaftar selama minimal 30 hari untuk withdraw")));
+                if ($source == "cashback" && $total_months < 1) {
+                    return json_encode(array("isValid" => false,  "error" => array("errorCode" => "Anda harus menunggu selama minimal 30 hari untuk withdraw cashback")));
+                } else if ($source == "bonus" && $days_difference < 15) {
+                    return json_encode(array("isValid" => false,  "error" => array("errorCode" => "Anda harus menunggu selama minimal 15 hari untuk withdraw bonus")));
+                } else if ($user->balance_deposit == 0 && $user['balance_cashback']==0) {
+                    return json_encode(array("isValid" => false,  "error" => array("errorCode" => "Anda harus deposit terlebih dahulu")));
                 } else {
-                    $modelForm->load($postData);
-                    return json_encode(array("isValid" => false,  "error" => array("errorCode" => "Fitur ini masih dalam pengembangan")));
+                    // return json_encode(array("isValid" => false,  "error" => array("errorCode" => "Fitur ini masih dalam pengembangan")));
                     // $modelForm->amount = (int) $modelForm->amount;
                     if ($modelForm->validate()) {
-                        if ($user->balance_deposit < (int) $modelForm->amount) {
+                        if ($user[$source] < (int) $modelForm->amount) {
                             return json_encode(array("isValid" => false, "amount" => $modelForm->amount, "error" => array("errorCode" => "Saldo anda tidak mencukupi")));
                         }
-                        return json_encode(array("isValid" => false,  "error" => array("errorCode" => "Maaf, Fitur ini masih dalam pengembangan")));
 
-                        $idempotency_key = "WD-" . $this->generateRandomString();
-                        $payoutInstance = new PayoutApi();
-                        $create_payout_request = new CreatePayoutRequest([
-                            'reference_id' => 'DISB-' . $this->generateRandomString(),
-                            'currency' => 'IDR',
-                            'channel_code' => 'ID_BRI',
-                            'channel_properties' => [
-                                'account_holder_name' => 'John Doe',
-                                'account_number' => '000000'
-                            ],
-                            'amount' => (int) $modelForm->amount,
-                            'description' => 'Test Bank Payout',
-                            'type' => 'DIRECT_DISBURSEMENT'
-                        ]);
-                        try {
-                            $result = $payoutInstance->createPayout($idempotency_key, null, $create_payout_request);
-                            return json_encode(array('dt' => $result));
-                        } catch (\Xendit\XenditSdkException $e) {
-                            // echo 'Exception when calling PayoutApi->createPayout: ', $e->getMessage(), PHP_EOL;
-                            // echo 'Full Error: ', json_encode($e->getFullError()), PHP_EOL;
-                            return json_encode(array("error" => $e->getFullError()));
+                        $withdraw = new Withdraw();
+                        $withdraw->attributes = array(
+                            "id" => "Wd" . rand(),
+                            "user_id" => $user->user_id,
+                            "amount" => (int) $modelForm->amount,
+                            "amount_plus_fee" => (int) $modelForm->amount - ((int) $modelForm->amount * 0.06),
+                            "source" => $source
+                        );
+
+                        if ($withdraw->validate() && $withdraw->save()) {
+                            $user[$source] = $user[$source] - (int) $modelForm->amount;
+                            $user->save();
+                            return json_encode(array("isValid" => true));
+                        } else {
+                            return json_encode(array("isValid" => false, "dataerr" => $withdraw->getErrors(), "error" => array("errorCode" => "Withdraw gagal silahkan coba beberapa saat lagi")));
                         }
+                        // $idempotency_key = "WD-" . $this->generateRandomString();
+                        // $payoutInstance = new PayoutApi();
+                        // $create_payout_request = new CreatePayoutRequest([
+                        //     'reference_id' => 'DISB-' . $this->generateRandomString(),
+                        //     'currency' => 'IDR',
+                        //     'channel_code' => 'ID_BRI',
+                        //     'channel_properties' => [
+                        //         'account_holder_name' => 'John Doe',
+                        //         'account_number' => '000000'
+                        //     ],
+                        //     'amount' => (int) $modelForm->amount,
+                        //     'description' => 'Test Bank Payout',
+                        //     'type' => 'DIRECT_DISBURSEMENT'
+                        // ]);
+                        // try {
+                        //     $result = $payoutInstance->createPayout($idempotency_key, null, $create_payout_request);
+                        //     return json_encode(array('dt' => $result));
+                        // } catch (\Xendit\XenditSdkException $e) {
+                        //     // echo 'Exception when calling PayoutApi->createPayout: ', $e->getMessage(), PHP_EOL;
+                        //     // echo 'Full Error: ', json_encode($e->getFullError()), PHP_EOL;
+                        //     return json_encode(array("error" => $e->getFullError()));
+                        // }
                     } else {
-                        return json_encode(array('errors' => $modelForm->errors, 'isValid' => false, 'data' => $modelForm->amount, 'pd' => $postData));
+                        return json_encode(array("isValid" => false, "amount" => $modelForm->amount, "error" => array("errorCode" => "Amount cannot be blank")));
                     }
                 }
                 // return json_encode(array("model" => $modelForm->errors, 'data' => Yii::$app->request->post('amount')));

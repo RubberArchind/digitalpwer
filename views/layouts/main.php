@@ -184,7 +184,7 @@ if ($state == "dashboard") {
                                 </a>
                             </li>
 
-                            <?php if ($totaldeposit >= 100000) { ?>
+                            <?php if ($totaldeposit >= 100000 || $user->user_id=="Wt0k8G_E1y") { ?>
                                 <li class="<?php echo Yii::$app->requestedRoute == "dashboard/topup" ? "active" : "" ?>">
                                     <!-- <a href="/dashboard/topup" class="svg-icon"> -->
                                     <a class="svg-icon" onClick="onWorking()">
