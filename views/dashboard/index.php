@@ -29,6 +29,20 @@ foreach ($bonuses as $data) {
         array_push($bonus_date, $dateOnly);
     }
 }
+$trxs = Transaction::findAll(['target_id' => $user->user_id, 'type' => "DEPOSIT"]);
+$balance_deposit = 0;
+foreach ($trxs as $trx) {
+    $amount  =  $trx->amount;
+    if ($amount >= 0 && $amount <= 1000000) {
+        $amount = $amount + 100000;
+    } else if ($amount >= 1100000 && $amount <= 5100000) {
+        $amount = $amount + 200000;
+    } else if ($amount >= 5100000) {
+        $amount = $amount + 300000;
+    }
+    $balance_deposit += $amount;
+}
+
 // Yii::$app->formatter->locale = 'id-ID';     
 ?>
 <script src="https://app.midtrans.com/snap/snap.js" data-client-key="Mid-client-ykXjhv_g8Ja88RAK"></script>
@@ -173,7 +187,7 @@ foreach ($bonuses as $data) {
                                 <h5>Deposit</h5>
                             </div>
                             <?php Pjax::begin(['id' => 'deposit']) ?>
-                            <h3><span class=""><?php echo Yii::$app->formatter->asCurrency($user->balance_deposit, 'IDR'); ?></span></h3>
+                            <h3><span class=""><?php echo Yii::$app->formatter->asCurrency($balance_deposit - $user->balance_cashback, 'IDR'); ?></span></h3>
                             <?php Pjax::end() ?>
                         </div>
                     </div>
@@ -304,16 +318,17 @@ foreach ($bonuses as $data) {
                                         <div class="container-fluid py-5">
                                             <div class="row">
                                                 <div class="col-lg-12">
-
                                                     <div class="horizontal-timeline">
-
                                                         <ul class="list-inline items">
                                                             <li class="list-inline-item items-list">
-                                                                <div class="px-4">
+                                                                <div class="card">
                                                                     <div class="event-date badge bg-info"><i class="ri-checkbox-blank-circle-fill"></i></div>
                                                                     <h5 class="pt-2">1 M</h5>
-                                                                    <p class="text-muted">Sepeda Motor<br></p>
-                                                                    <img class="card-img" src="/images/yamaha_aerox.png" alt="Yamaha Aerox">
+                                                                    <p class="text-muted">Motor Honda Beat</p>
+                                                                    <img class="card-img" src="/images/beat.png" alt="Honda Beat">
+                                                                    <p>Omzet Rp 1.000.000.000</p>
+                                                                    <p>Top up minimal Rp. 10.000.000</p>
+                                                                    <p>Minimal downline langsung 7 orang, Masing-masing downline Top Up Rp. 10.000.000</p>
                                                                     <div>
                                                                         <?php
                                                                         if ($user->balance_bonus >= 1000000000) {
@@ -326,11 +341,14 @@ foreach ($bonuses as $data) {
                                                                 </div>
                                                             </li>
                                                             <li class="list-inline-item items-list">
-                                                                <div class="px-4">
+                                                                <div class="card">
                                                                     <div class="event-date badge bg-success"><i class="ri-checkbox-blank-circle-fill"></i></div>
                                                                     <h5 class="pt-2">10 M</h5>
-                                                                    <p class="text-muted">Mobil Sigra / Ayla<br></p>
-                                                                    <img class="card-img" src="/images/mobil_sigra.png" alt="Yamaha Aerox">
+                                                                    <p class="text-muted">Mobil Sigra</p>
+                                                                    <img class="card-img" src="/images/mobil_sigra.png" alt="Mobil Sigra">
+                                                                    <p>Omzet Rp 10.000.000.000</p>
+                                                                    <p>Top up minimal Rp. 20.000.000</p>
+                                                                    <p>Minimal downline langsung 15 orang, Masing-masing downline Top Up Rp. 20.000.000</p>
                                                                     <div>
                                                                         <?php
                                                                         if ($user->balance_bonus >= 10000000000) {
@@ -343,14 +361,17 @@ foreach ($bonuses as $data) {
                                                                 </div>
                                                             </li>
                                                             <li class="list-inline-item items-list">
-                                                                <div class="px-4">
+                                                                <div class="card">
                                                                     <div class="event-date badge bg-danger"><i class="ri-checkbox-blank-circle-line"></i></div>
-                                                                    <h5 class="pt-2">20 M</h5>
-                                                                    <p class="text-muted">Mobil Avanza / Xenia<br></p>
-                                                                    <img class="card-img" src="/images/mobil_xenia.png" alt="Yamaha Aerox">
+                                                                    <h5 class="pt-2">30 M</h5>
+                                                                    <p class="text-muted">Mobil Xenia</p>
+                                                                    <img class="card-img" src="/images/mobil_xenia.png" alt="Mobil Xenia">
+                                                                    <p>Omzet Rp 30.000.000.000</p>
+                                                                    <p>Top up minimal Rp. 30.000.000</p>
+                                                                    <p>Minimal downline langsung 25 orang, Masing-masing downline Top Up Rp. 20.000.000</p>
                                                                     <div>
                                                                         <?php
-                                                                        if ($user->balance_bonus >= 20000000000) {
+                                                                        if ($user->balance_bonus >= 30000000000) {
                                                                             echo '<a href="#" class="btn btn-primary btn-sm">Claim</a>';
                                                                         } else {
                                                                             echo '<a href="#" class="btn btn-light btn-sm" disabled>Claim</a>';
@@ -360,11 +381,14 @@ foreach ($bonuses as $data) {
                                                                 </div>
                                                             </li>
                                                             <li class="list-inline-item items-list">
-                                                                <div class="px-4">
+                                                                <div class="card">
                                                                     <div class="event-date badge bg-warning"><i class="ri-checkbox-blank-circle-line"></i></div>
                                                                     <h5 class="pt-2">40 M</h5>
                                                                     <p class="text-muted">Mobil Fortuner / Pajero</p>
                                                                     <img class="card-img" src="/images/mobil_pajero.png" alt="Yamaha Aerox">
+                                                                    <p>Omzet Rp 40.000.000.000</p>
+                                                                    <p>Top up minimal Rp. 40.000.000</p>
+                                                                    <p>Minimal downline langsung 40 orang, Masing-masing downline Top Up Rp. 40.000.000</p>
                                                                     <div>
                                                                         <?php
                                                                         if ($user->balance_bonus >= 40000000000) {
@@ -377,9 +401,7 @@ foreach ($bonuses as $data) {
                                                                 </div>
                                                             </li>
                                                         </ul>
-
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -439,7 +461,7 @@ foreach ($bonuses as $data) {
 
                                     <div class="pl-3 border-left">
                                         <h5 class="mb-1">Announcement</h5>
-                                        <p class="mb-0">Kami sedang melakukan perbaikan, berlangsung hingga 19-05-2024 10:00, harap abaikan jika ada error atau aneh.</p>
+                                        <p class="mb-0"></p>
                                     </div>
                                 </div>
                             </div>

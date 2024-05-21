@@ -21,6 +21,7 @@ use Yii;
  * @property string $bank_number
  * @property float $balance_deposit
  * @property float $balance_bonus
+ * @property float $balance_cashback
  * @property string $signup_time 
  *
  * @property Transaction[] $transactions
@@ -41,8 +42,8 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     public function rules()
     {
         return [
-            [['user_id', 'username', 'auth_key', 'full_name', 'email', 'password', 'phone', 'bank_code', 'bank_number', 'balance_deposit', 'balance_bonus'], 'required'],
-            [['balance_deposit', 'balance_bonus'], 'number'],
+            [['user_id', 'username', 'auth_key', 'full_name', 'email', 'password', 'phone', 'bank_code', 'bank_number', 'balance_deposit', 'balance_bonus', 'balance_cashback'], 'required'],
+            [['balance_deposit', 'balance_bonus', 'balance_cashback'], 'number'],
             ['email','email'],
             ['username', 'compare', 'compareAttribute' => 'email'],
             [['signup_time'], 'safe'],
@@ -76,6 +77,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
             'bank_number' => Yii::t('app', 'Bank Number'),
             'balance_deposit' => Yii::t('app', 'Balance Deposit'),
             'balance_bonus' => Yii::t('app', 'Balance Bonus'),
+            'balance_cashback' => Yii::t('app', 'Balance Cashback'),
             'signup_time' => Yii::t('app', 'Signup Time'), 
         ];
     }
