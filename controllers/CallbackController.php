@@ -75,7 +75,7 @@ class CallbackController extends \yii\web\Controller
                         'target_id' => $userReferrer->user_id,
                         'method' => 'Internal',
                         'type' => "BONUS",
-                        'amount' => $amount,
+                        'amount' => $bonusAmount,
                         'time' => $timestamp
                     );
                     $transaction->validate();

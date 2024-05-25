@@ -76,13 +76,14 @@ $trxs = Transaction::findAll(['target_id' => $user->user_id]);
                                     $no = 1;
                                     foreach ($trxs as $trx) {
                                         $amount  =  $trx->amount;
-                                        if ($amount >= 5100000 && $amount <= 10000000) {
-                                            $amount = $amount + 300000;
-                                        } else if ($amount >= 1100000 && $amount <= 5000000) {
-                                            $amount = $amount + 200000;
-                                        } else if ($amount >= 100000 && $amount <= 1000000) {
-                                            $amount = $amount + 100000;
-                                        }
+                                        
+                                        // if ($amount >= 5100000 && $amount <= 10000000) {
+                                        //     $amount = $amount + 300000;
+                                        // } else if ($amount >= 1100000 && $amount <= 5000000) {
+                                        //     $amount = $amount + 200000;
+                                        // } else if ($amount >= 100000 && $amount <= 1000000) {
+                                        //     $amount = $amount + 100000;
+                                        // }
                                         echo sprintf('<tr>
                                         <td scope="row" class="text-center">%s</td>
                                         <td>%s</td>

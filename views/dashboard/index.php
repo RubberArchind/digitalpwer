@@ -32,15 +32,8 @@ foreach ($bonuses as $data) {
 $trxs = Transaction::findAll(['target_id' => $user->user_id, 'type' => "DEPOSIT"]);
 $balance_deposit = 0;
 foreach ($trxs as $trx) {
-    $amount  =  $trx->amount;
-    if ($amount >= 0 && $amount <= 1000000) {
-        $amount = $amount + 100000;
-    } else if ($amount >= 1100000 && $amount <= 5100000) {
-        $amount = $amount + 200000;
-    } else if ($amount >= 5100000) {
-        $amount = $amount + 300000;
-    }
-    $balance_deposit += $amount;
+    $amount  =  $trx->amount;    
+    $balance_deposit += $amount*2;
 }
 
 // Yii::$app->formatter->locale = 'id-ID';     
