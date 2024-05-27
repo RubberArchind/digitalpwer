@@ -31,8 +31,11 @@ if ($result !== false && $result->num_rows > 0) {
         $row['interval'] = $daysDifference;
         $row['bonusleft'] = 200 - $daysDifference;
 
-        $sql2 = sprintf("INSERT INTO cashback VALUES ('%s', '%s', '%s', %f, %f, %f)", $row['id'], $row['user_id'], $row['time'], $row['amount'], $row['bonusleft'], (200 - $row['bonusleft']));
-        $conn->query($sql2);
+        $queryChecker = $conn->query(sprintf("SELECT * FROM cashback WHERE id='%s'", $row['id']));
+        if ($queryChecker->num_rows == 0) {
+            $sql2 = sprintf("INSERT INTO cashback VALUES ('%s', '%s', '%s', %f, %f, %f)", $row['id'], $row['user_id'], $row['time'], $row['amount'], $row['bonusleft'], (200 - $row['bonusleft']));
+            $conn->query($sql2);
+        }
         $rows[] = $row;
     }
 
