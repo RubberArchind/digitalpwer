@@ -33,10 +33,10 @@ foreach ($bonuses as $data) {
 $trxs = Transaction::findAll(['target_id' => $user->user_id, 'type' => "DEPOSIT"]);
 $balance_deposit = 0;
 foreach ($trxs as $trx) {
-    $amount  =  $trx->amount;    
-    $balance_deposit += $amount*2;
+    $amount  =  $trx->amount;
+    $balance_deposit += $amount * 2;
 }
-$wds = Withdraw::findAll(['user_id' => $user->user_id]);
+$wds = Withdraw::findAll(['user_id' => $user->user_id, 'source' => 'balance_cashback']);
 foreach ($wds as $wd) {
     $balance_deposit -= $wd['amount'];
 }
