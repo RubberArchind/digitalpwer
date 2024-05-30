@@ -3,6 +3,7 @@
 use app\models\Transaction;
 use yii\helpers\Html;
 use app\models\User;
+use app\models\Withdraw;
 use app\models\Logs;
 use kartik\money\MaskMoney;
 use miloschuman\highcharts\Highcharts;
@@ -34,6 +35,10 @@ $balance_deposit = 0;
 foreach ($trxs as $trx) {
     $amount  =  $trx->amount;    
     $balance_deposit += $amount*2;
+}
+$wds = Withdraw::findAll(['user_id' => $user->user_id]);
+foreach ($wds as $wd) {
+    $balance_deposit -= $wd['amount'];
 }
 
 // Yii::$app->formatter->locale = 'id-ID';     
