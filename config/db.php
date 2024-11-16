@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=127.0.0.1;dbname=digy5127_digitalpwer',
-    'username' => 'digy5127_digitalpweradmin',
-    'password' => 'djtLu[e8&%t^',
+    'dsn' => 'mysql:host=127.0.0.1;dbname=',
+    'username' => '',
+    'password' => '',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
